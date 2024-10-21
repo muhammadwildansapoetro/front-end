@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- Input Tag -->
+    <form action="" method="post">
+      <input type="text" />
+      <input type="password" required />
+      <input type="checkbox" />
+      <input type="radio" />
+      <input type="number" min="1" max="10" />
+      <input type="submit" value="OK" />
+      <textarea rows="3" cols="58"></textarea>
+    </form>
+
+    <!-- Button Tag -->
+    <button type="button">Submit</button>
+    <button type="button" onclick="doSomething()">Apply</button>
+
+    <!-- Select Tag -->
+    <p>Apa warna favoritmu?</p>
+    <select>
+      <option>Merah</option>
+      <option>Biru</option>
+      <option>Kuning</option>
+    </select>
+    <p>Apa makanan favoritmu?</p>
+    <select>
+      <option>Telur gulung</option>
+      <option selected>Cilok</option>
+      <option>Bakso</option>
+    </select>
+
+    <!-- Label, Fieldset, & Legend Tag -->
+    <p>
+      <label for="user">Username</label>
+      <input type="text" name="user" />
+    </p>
+
+    <p>
+      <label for="pass">Password</label>
+      <input type="password" name="pass" />
+    </p>
+
+    <fieldset>
+      <legend>Personal Data</legend>
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" />
+      </p>
+      <p>
+        <label for="age">Age:</label>
+        <input type="number" name="age" />
+      </p>
+    </fieldset>
+
+    <script>
+      function doSomething() {
+        alert("You have clicked a button");
+      }
+    </script>
+  </body>
+</html>
