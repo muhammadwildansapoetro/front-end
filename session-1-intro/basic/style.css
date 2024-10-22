@@ -1,0 +1,58 @@
+p {
+  color: coral;
+}
+
+/* Class lebih prioritas dari tag */
+.car {
+  color: deeppink;
+}
+
+/* ID lebih prioritas dari class */
+#bmw {
+  color: dodgerblue;
+}
+#toyota {
+  color: crimson;
+}
+
+body {
+  /* background-color: aqua; */
+  /* background: linear-gradient(90deg, blue, yellow); */
+  /* background: url(images/background-image.jpg); */
+  background-size: cover;
+}
+
+.text {
+  color: black;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.content {
+  background-color: turquoise;
+  width: fit-content;
+  height: fit-content;
+  align-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: 5px dotted palevioletred;
+  border-radius: 20px;
+}
+
+.content:hover {
+  background-color: hotpink;
+  border-color: turquoise;
+  cursor: pointer;
+}
+
+.text::first-letter {
+  font-size: 30px;
+}
+
+.text:hover::first-letter {
+  color: turquoise;
+}
+
+.lorem::first-line {
+  color: turquoise;
+}
