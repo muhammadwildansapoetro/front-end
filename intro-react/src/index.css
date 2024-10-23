@@ -1,5 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.home {
   background-color: #1f2833;
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+}
+
+.left-element {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex: 1;
 }

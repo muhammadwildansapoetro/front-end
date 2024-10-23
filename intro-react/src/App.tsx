@@ -1,16 +1,23 @@
 import Navbar from "./components/navbar";
-import HomePage from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import Home from "./pages/home";
+import { Routes, Route } from "react-router-dom";
 
 // Functional Component
 // First letter of component name must uppercase (e.g "App")
 function App() {
-  const str: string = "Hello World";
-  const name: string = "John Doe";
+  // const name: string = "John Doe";
 
   return (
     <div>
-      <Navbar name={name} />
-      <HomePage />
+      {/* <Navbar name={name} /> */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }

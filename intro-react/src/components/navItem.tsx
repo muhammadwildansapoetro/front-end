@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 function NavItem() {
   return (
     <div className="navitem">
-      <p>Home</p>
-      <p>About</p>
-      <p>Contact</p>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/about"}>About</Link>
+      <Link to={"/contact"}>Contact</Link>
     </div>
   );
 }
