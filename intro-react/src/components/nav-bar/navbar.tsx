@@ -1,6 +1,6 @@
 import "./navbar.css";
 import NavItem from "./navItem";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 // interface IProps {
 //   name: string;

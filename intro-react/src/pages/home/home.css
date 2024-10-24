@@ -1,0 +1,18 @@
+.home-page {
+  background-color: white;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+}
+
+.image {
+  height: 400px;
+}
+
+.image-box {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+  padding-right: 50px;
+}

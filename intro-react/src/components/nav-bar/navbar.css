@@ -1,7 +1,7 @@
 .navbar {
   height: 50px;
   width: 100%;
-  background-color: #66fcf1;
+  background-color: #05d7df;
   color: #0b0c10;
   display: flex;
   justify-content: space-between;
@@ -9,6 +9,9 @@
   padding: 0 20px;
   box-sizing: border-box;
   font-family: arial;
+  /* z-index: 2;
+  position: fixed;
+  top: 0px; */
 }
 
 .navitem {
