@@ -2,12 +2,12 @@ import img from "../assets/webdev.png";
 
 function Hero() {
   return (
-    <section id="home" className="pt-36 pb-36">
+    <section id="home" className="pt-32 pb-32">
       <div className="container">
         <div className="flex flex-wrap">
-          <div className="w-full self-center px-20 lg:w-1/2 lg:pl-24 lg:px-0">
+          <div className="w-full self-center px-10 lg:w-1/2 lg:pl-24 lg:px-0">
             <h1 className="text-2xl font-semibold text-darker md:text-3xl w-fit">
-              Ha, nama saya
+              Hi, my name is
               <span className="block font-bold text-accent text-4xl md:text-5xl lg:text-6xl">
                 Muhammad Wildan.
               </span>
