@@ -15,8 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Company Profile",
-  description: "Company Profile",
+  title: "FarmLink Indonesia",
+  description:
+    "Welcome to FarmLink Indonesia, a trusted leader in sustainable agriculture and modern farming solutions. We specialize in eco-friendly crop management, soil health, and resource-efficient food production to help farmers grow healthier, more productive crops. With a commitment to innovation, our solutions leverage advanced agricultural technology to optimize yield, reduce environmental impact, and support local and global food supply chains. Discover how FarmLink Indonesia is driving the future of agriculture with sustainable, reliable, and quality-focused farming practices.",
 };
 
 export default function RootLayout({
