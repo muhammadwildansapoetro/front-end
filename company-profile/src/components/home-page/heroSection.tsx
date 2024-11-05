@@ -1,7 +1,7 @@
 // Hero section: This is the large banner at the top of the page
 // that should feature a high-quality image or video that represents the company's brand.
 // The hero section should also include a brief overview of the company and its mission statement.
-
+import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -17,8 +17,15 @@ export default function HeroSection() {
           <h2 className="text-2xl tracking-wide mx-5 lg:text-4xl font-semibold mt-3 text-color1 ">
             Delivering fresh, organic produce from farm to table.
           </h2>
-          <button className="bg-color4 font-bold rounded-full px-5 py-1 mx-5 mt-5 shadow-lg lg:text-lg text-color1 hover:bg-color1 hover:text-color3 hover:scale-105">
+          <button className="flex items-center gap-2 bg-color4 font-bold rounded-full px-5 py-2 mx-5 mt-5 shadow-lg lg:text-lg text-color1 hover:bg-color1 hover:text-color3 hover:scale-105">
             <Link href="#products">Explore Our Products</Link>
+            <Image
+              src="/leaf.png"
+              alt="leaf icon"
+              width={1000}
+              height={1000}
+              className="w-[15px]"
+            />
           </button>
         </div>
       </div>
