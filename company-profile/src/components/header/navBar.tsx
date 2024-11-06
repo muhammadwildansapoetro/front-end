@@ -12,13 +12,16 @@ export default function NavBar() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.onscroll = function () {
-        const header: any = document.querySelector("header");
-        const fixedNav = header.offsetTop;
+        const header = document.querySelector("header") as HTMLElement | null;
 
-        if (window.scrollY > fixedNav) {
-          header.classList.add("navbar-fixed");
-        } else {
-          header.classList.remove("navbar-fixed");
+        if (header) {
+          const fixedNav = header.offsetTop;
+
+          if (window.scrollY > fixedNav) {
+            header.classList.add("navbar-fixed");
+          } else {
+            header.classList.remove("navbar-fixed");
+          }
         }
       };
 

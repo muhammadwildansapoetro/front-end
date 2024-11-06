@@ -2,6 +2,7 @@
 
 import { ITeam } from "@/types/team";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function TeamList() {
   const [teams, setTeams] = useState<ITeam[]>([]);
@@ -31,9 +32,11 @@ export default function TeamList() {
         <ul className="flex flex-col lg:flex-row gap-10">
           {teams.map((person, index) => (
             <li key={index} className="text-center">
-              <img
+              <Image
                 src={person.picture.large}
                 alt={`${person.name.first} ${person.name.last}`}
+                width={1000}
+                height={1000}
                 className="mx-auto rounded-full"
               />
               <p className="font-bold">{`${person.name.first} ${person.name.last}`}</p>
