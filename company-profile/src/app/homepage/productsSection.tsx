@@ -7,7 +7,7 @@ export default function ProductsSection() {
   return (
     <div className="bg-color4 py-36">
       <div className="container mx-auto">
-        <h1 className="text-2xl lg:text-4xl font-bold text-color1 text-center mb-10">
+        <h1 className="text-3xl lg:text-5xl font-bold text-color1 text-center mb-10">
           Our Products & Services
         </h1>
         <div className="flex flex-col lg:flex-wrap lg:flex-row justify-center items-center mx-5 my-5 gap-10">

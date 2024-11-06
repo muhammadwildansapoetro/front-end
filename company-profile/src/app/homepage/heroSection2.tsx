@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeroSection() {
+export default function HeroSection2() {
   return (
     <div className="relative w-full h-screen bg-cover bg-center flex items-start justify-center">
       <picture>
@@ -45,7 +45,7 @@ export default function HeroSection() {
             , we&apos;re redefining agriculture to increase productivity and
             reduce environmental impact.
           </p>
-          <button className="flex items-center gap-3 bg-color4 rounded-full px-8 py-4 shadow-lg mt-10 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
+          <button className="flex items-center gap-3 bg-color4 rounded-full px-8 py-4 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
             <Link
               href="#products"
               className="text-slate-900 font-bold text-lg lg:text-xl tracking-wider"
@@ -57,7 +57,7 @@ export default function HeroSection() {
               alt="leaf icon"
               width={1000}
               height={1000}
-              className="w-[20px]"
+              className="w-[15px]"
             />
           </button>
         </div>
