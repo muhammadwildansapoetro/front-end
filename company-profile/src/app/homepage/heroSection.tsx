@@ -25,14 +25,14 @@ export default function HeroSection() {
               {" "}
               sustainable agriculture
             </span>{" "}
-            is essential to overcoming today’s global challenges—climate change,
-            food security, and population growth. Through advanced technology
-            and{" "}
+            is essential to overcoming today&apos;s global challenges—climate
+            change, food security, and population growth. Through advanced
+            technology and{" "}
             <span className="font-bold text-gray-700">
               eco-friendly practices
             </span>
-            , we're redefining agriculture to increase productivity and reduce
-            environmental impact.
+            , we&apos;re redefining agriculture to increase productivity and
+            reduce environmental impact.
           </p>
           <button className="flex items-center gap-2 bg-color4 font-bold rounded-full px-5 py-2 mx-5 shadow-lg lg:text-lg mt-5 text-color1 hover:bg-color1 hover:text-color3 hover:scale-105">
             <Link href="#products">Explore Our Services</Link>
