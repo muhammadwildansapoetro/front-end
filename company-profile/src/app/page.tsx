@@ -1,6 +1,6 @@
 import HeroSection from "@/app/homepage/heroSection";
 import OverviewSection from "@/app/homepage/overviewSection";
-import ServicesSection from "@/app/homepage/servicesSection";
+import ProductsSection from "@/app/homepage/productsSection";
 import TestimonialsSection from "@/app/homepage/testimonialsSection";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
         <section id="overview">
           <OverviewSection />
         </section>
-        <section id="services" className="w-full">
-          <ServicesSection />
+        <section id="products" className="w-full">
+          <ProductsSection />
         </section>
         <TestimonialsSection />
       </div>

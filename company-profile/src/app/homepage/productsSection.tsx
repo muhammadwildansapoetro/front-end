@@ -3,7 +3,7 @@
 // as well as calls to action that encourage visitors to learn more.
 import Image from "next/image";
 
-export default function ServicesSection() {
+export default function ProductsSection() {
   return (
     <div className="bg-color4 py-36">
       <div className="container mx-auto">
@@ -19,7 +19,7 @@ export default function ServicesSection() {
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Microgreens</h3>
+            <div className="card-title">Microgreens</div>
             <button className="card-button">
               Discover the Power of Microgreens
             </button>
@@ -27,13 +27,13 @@ export default function ServicesSection() {
 
           <div className="card">
             <Image
-              src="/lettuce.jpg"
+              src="/lettuce2.jpg"
               alt="lettuce image"
               width={1000}
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Hydroponic Lettuce</h3>
+            <div className="card-title">Hydroponic Lettuce</div>
             <button className="card-button">
               Explore Our Hydroponic Solutions
             </button>
@@ -41,13 +41,13 @@ export default function ServicesSection() {
 
           <div className="card">
             <Image
-              src="/vegetables2.jpg"
+              src="/vegetables3.jpg"
               alt="vegetables image"
               width={1000}
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Fresh Vegetables</h3>
+            <div className="card-title">Fresh Vegetables</div>
             <button className="card-button">
               Discover Our Fresh Produce Offerings
             </button>
@@ -61,7 +61,7 @@ export default function ServicesSection() {
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Organic Brown Rice</h3>
+            <div className="card-title">Organic Brown Rice</div>
             <button className="card-button">
               Learn About Our Organic Grains
             </button>
@@ -75,7 +75,7 @@ export default function ServicesSection() {
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Gedong Gincu Mango</h3>
+            <div className="card-title">Gedong Gincu Mango</div>
             <button className="card-button">
               Taste the Gedong Gincu Difference
             </button>
@@ -89,7 +89,7 @@ export default function ServicesSection() {
               height={1000}
               className="object-cover h-72"
             />
-            <h3 className="card-title">Other Mangoes from Indramayu</h3>
+            <div className="card-title">Other Mangoes from Indramayu</div>
             <button className="card-button">Browse Our Mango Varieties </button>
           </div>
         </div>
