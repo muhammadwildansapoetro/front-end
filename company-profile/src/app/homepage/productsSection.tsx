@@ -27,7 +27,7 @@ export default function ProductsSection() {
 
           <div className="card">
             <Image
-              src="/lettuce2.jpg"
+              src="/lettuce.jpg"
               alt="lettuce image"
               width={1000}
               height={1000}
@@ -41,7 +41,7 @@ export default function ProductsSection() {
 
           <div className="card">
             <Image
-              src="/vegetables3.jpg"
+              src="/vegetables2.jpg"
               alt="vegetables image"
               width={1000}
               height={1000}
