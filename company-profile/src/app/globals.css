@@ -43,7 +43,7 @@ body {
 }
 
 .card {
-  @apply flex flex-col w-[400px] h-[405px] overflow-hidden bg-white shadow-lg rounded-xl hover:scale-105;
+  @apply flex flex-col w-[400px] h-[405px] overflow-hidden bg-white shadow-lg rounded-xl lg:hover:scale-105;
 }
 
 .card-title {
@@ -51,5 +51,5 @@ body {
 }
 
 .card-button {
-  @apply flex items-center rounded-full mt-3 bg-color1 text-color3 font-semibold mx-auto px-5 py-1 hover:text-color4;
+  @apply flex items-center rounded-full mt-3 bg-color1 text-color3 font-semibold mx-auto px-5 py-2 hover:text-color4;
 }

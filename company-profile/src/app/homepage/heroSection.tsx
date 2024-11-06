@@ -34,8 +34,8 @@ export default function HeroSection() {
             , we&apos;re redefining agriculture to increase productivity and
             reduce environmental impact.
           </p>
-          <button className="flex items-center gap-2 bg-color4 font-bold rounded-full px-5 py-2 mx-5 shadow-lg lg:text-lg mt-5 text-color1 hover:bg-color1 hover:text-color3 hover:scale-105">
-            <Link href="#products">Explore Our Services</Link>
+          <button className="flex items-center gap-2 bg-color4 text-slate-800 font-bold rounded-full px-6 py-3 mx-5 shadow-lg lg:text-lg mt-5  hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
+            <Link href="#products">Explore Our Products</Link>
             <Image
               src="/leaf.png"
               alt="leaf icon"

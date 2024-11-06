@@ -28,10 +28,10 @@ export default function NavMenu() {
         </li>
         <li>
           <Link
-            href={"/services"}
+            href={"/products"}
             className="flex font-bold mx-4 my-2 lg:text-lg lg:my-0 text-color1 hover:scale-110"
           >
-            Services
+            Products
           </Link>
         </li>
         <li>
