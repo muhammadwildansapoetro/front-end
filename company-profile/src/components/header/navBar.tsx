@@ -31,7 +31,7 @@ export default function NavBar() {
   return (
     <header className="bg-transparent fixed top-0 left-0 w-full flex items-center z-30">
       <div className="container mx-auto">
-        <div className="flex items-center justify-between relative px-5 py-2">
+        <div className="flex items-center justify-between relative px-5 py-2 lg:px-20">
           <Logo />
           <HamburgerMenu />
           <NavMenu />

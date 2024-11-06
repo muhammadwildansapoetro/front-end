@@ -1,17 +1,18 @@
-import HeroSection from "@/components/home-page/heroSection";
-import OverviewSection from "@/components/home-page/overviewSection";
-import ProductsSection from "@/components/home-page/productsSection";
-import TestimonialsSection from "@/components/home-page/testimonialsSection";
-import Image from "next/image";
+import HeroSection from "@/app/homepage/heroSection";
+import OverviewSection from "@/app/homepage/overviewSection";
+import ServicesSection from "@/app/homepage/servicesSection";
+import TestimonialsSection from "@/app/homepage/testimonialsSection";
 
 export default function Home() {
   return (
     <div className="w-full">
-      <div className="flex flex-col justify-center items-center border rounded-lg shadow-lg">
+      <div className="flex flex-col justify-center items-center">
         <HeroSection />
-        <OverviewSection />
-        <section id="products">
-          <ProductsSection />
+        <section id="overview">
+          <OverviewSection />
+        </section>
+        <section id="services" className="w-full">
+          <ServicesSection />
         </section>
         <TestimonialsSection />
       </div>
