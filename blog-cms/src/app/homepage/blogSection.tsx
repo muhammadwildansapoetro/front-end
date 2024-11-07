@@ -11,7 +11,7 @@ export default async function BlogSection() {
         <h1 className="text-center font-bold text-3xl lg:text-6xl mb-5">
           Our Articles
         </h1>
-        <div className="flex flex-col items-center lg:flex-row lg:justify-evenly ">
+        <div className="flex flex-wrap justify-center items-center lg:justify-start ">
           {data.map((item, index) => {
             return (
               <div
