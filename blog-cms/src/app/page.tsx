@@ -1,11 +1,11 @@
-import Blog from "@/components/section/blog";
-import Hero from "@/components/section/hero";
+import BlogSection from "@/app/homepage/blogSection";
+import HeroSection from "@/app/homepage/heroSection";
 
 export default async function Home() {
   return (
     <div>
-      <Hero />
-      <Blog />
+      <HeroSection />
+      <BlogSection />
     </div>
   );
 }
