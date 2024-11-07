@@ -17,12 +17,16 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: {
     template: "Agri-Tech Blog - %s",
-    default: "Agri-Tech Blog",
+    default:
+      "Agri-Tech Blog - Agri-Tech: Innovations in Agriculture and Sustainable Farming Solutions",
   },
   description:
     "Explore the latest advancements in agriculture technology with Agri-Tech. From precision farming and smart irrigation to sustainable crop management, discover how tech is transforming the future of farming and helping create a greener, more productive world. Stay informed with expert insights, industry news, and practical tips for modern agriculture.",
   icons: {
     icon: "/blogger.png",
+  },
+  openGraph: {
+    images: ["/blogger.png"],
   },
 };
 
