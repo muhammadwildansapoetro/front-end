@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     icon: "/blogger.png",
   },
   openGraph: {
-    images: ["/blogger.png"],
+    images: ["/open-book.jpg"],
   },
 };
 
