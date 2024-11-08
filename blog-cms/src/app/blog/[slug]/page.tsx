@@ -1,5 +1,6 @@
+import RecomendationBlog from "@/components/recomendation";
 import ShareButton from "@/components/share";
-import { getBlogs, getBlogSlug } from "@/libs/blog";
+import { getBlogRecom, getBlogs, getBlogSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
 import {
   documentToReactComponents,
@@ -39,6 +40,7 @@ export default async function BlogDetail({
   params: { slug: string };
 }) {
   const blog: IBlog = await getBlogSlug(params.slug);
+  const blogNe: IBlog[] = await getBlogRecom(params.slug);
 
   const options: Options = {
     renderNode: {
@@ -52,7 +54,7 @@ export default async function BlogDetail({
   };
 
   return (
-    <div className="py-20 lg:mx-80">
+    <div className="py-24 lg:mx-96">
       <div className="container mx-auto">
         <div className="flex flex-col items-start mx-10">
           <div className="font-semibold text-lg lg:text-xl text-teal-500 mb-2">
@@ -68,7 +70,7 @@ export default async function BlogDetail({
             alt="thumbnail"
             width={1000}
             height={1000}
-            className="my-5"
+            className="my-5 rounded-lg"
           />
 
           <div className="font-semibold text-slate-800">
@@ -79,13 +81,17 @@ export default async function BlogDetail({
             Updated {blog.fields.date}
           </div>
 
-          <div className="my-5 lg:mx-32 text-left lg:text-justify">
+          <div className="my-5 text-left lg:text-justify">
             {documentToReactComponents(blog.fields.content, options)}
           </div>
         </div>
 
         <div className="mx-10">
           <ShareButton slug={blog.fields.slug} />
+        </div>
+
+        <div className="mx-10 mt-10">
+          <RecomendationBlog blogs={blogNe} />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="pt-36 pb-96">
+    <section className="pt-28 pb-96">
       <div className="container mx-auto">
         <div className="mx-5 lg:mx-52 lg:text-center">
           <h1 className="font-semibold text-2xl text-slate-500 lg:text-3xl">

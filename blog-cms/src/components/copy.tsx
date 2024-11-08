@@ -8,7 +8,7 @@ export default function CopyButton({ link }: { link: string }) {
   const [copied, setCopied] = useState<boolean>(false);
   return (
     <div
-      className="cursor-pointer"
+      className="cursor-pointer lg:hover:text-teal-500"
       onClick={() => {
         copy(link);
         setCopied(true);
