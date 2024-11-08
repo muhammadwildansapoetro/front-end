@@ -1,3 +1,4 @@
+import ShareButton from "@/components/share";
 import { getBlogs, getBlogSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
 import {
@@ -53,8 +54,8 @@ export default async function BlogDetail({
   return (
     <div className="py-20 lg:mx-80">
       <div className="container mx-auto">
-        <div className="flex flex-col items-start mx-5">
-          <div className="font-semibold text-lg lg:text-xl text-slate-500">
+        <div className="flex flex-col items-start mx-10">
+          <div className="font-semibold text-lg lg:text-xl text-teal-500 mb-2">
             {blog.fields.category}
           </div>
 
@@ -70,17 +71,21 @@ export default async function BlogDetail({
             className="my-5"
           />
 
-          <div className="font-semibold text-lg lg:text-xl text-slate-700">
+          <div className="font-semibold text-slate-800">
             By {blog.fields.author.fields.name}
           </div>
 
-          <div className="text-slate-500 lg:text-lg font-semibold">
+          <div className="text-slate-500 font-semibold">
             Updated {blog.fields.date}
           </div>
 
-          <div className="my-5 lg:mx-40 text-justify">
+          <div className="my-5 lg:mx-32 text-left lg:text-justify">
             {documentToReactComponents(blog.fields.content, options)}
           </div>
+        </div>
+
+        <div className="mx-10">
+          <ShareButton slug={blog.fields.slug} />
         </div>
       </div>
     </div>

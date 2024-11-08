@@ -61,7 +61,7 @@ export default async function BlogSection() {
                     href={`/blog/${item.fields.slug}`}
                     className="bg-teal-500 rounded-full px-5 py-2 text-white hover:bg-teal-600 font-bold focus:outline-none focus:ring-2 focus:ring-slate-700"
                   >
-                    Read More
+                    Read Article
                   </Link>
                 </div>
               </div>
