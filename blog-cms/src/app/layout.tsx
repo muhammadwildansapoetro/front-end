@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "@/components/navBar";
+import NavBar2 from "@/components/header/navBar2";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,12 +16,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "Agri-Tech Blog - %s",
-    default:
-      "Agri-Tech Blog - Innovations in Agriculture and Sustainable Farming Solutions",
+    template: "Muhammadwildansapoetro - %s",
+    default: "Muhammadwildansapoetro - Agriculture, Programming, and Persib",
   },
   description:
-    "Explore the latest advancements in agriculture technology with Agri-Tech. From precision farming and smart irrigation to sustainable crop management, discover how tech is transforming the future of farming and helping create a greener, more productive world. Stay informed with expert insights, industry news, and practical tips for modern agriculture.",
+    "Hello, I am Muhammad Wildan Sapoetro. My blog is dedicated to my interests: the fields of agriculture, the world of programming, and the vibrant energy of Persib Football Club. This blog is a journey through my thoughts on sustainable agriculture, coding projects, and the stories that shape my favorite football team. Dive in, and lets explore these fields together!",
   icons: {
     icon: "/blogger.png",
   },
@@ -40,7 +39,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavBar />
+        <NavBar2 />
         {children}
       </body>
     </html>
