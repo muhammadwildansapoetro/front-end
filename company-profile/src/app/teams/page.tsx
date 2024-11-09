@@ -1,4 +1,4 @@
-import TeamList from "@/app/teams/teamList";
+import TeamList from "@/components/teamList";
 
 export default function Teams() {
   return (

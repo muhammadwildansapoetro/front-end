@@ -15,7 +15,7 @@ export default function HeroSection() {
             Cultivating a Sustainable Future
           </h1>
           <h2 className="text-2xl tracking-wide mx-5 lg:text-4xl font-semibold mt-3 text-color1 ">
-            Empowering Sustainable Agriculture Through Innovation.
+            Empowering Sustainable Agriculture Through Innovation
           </h2>
           <p className="hidden font-semibold text-gray-500 lg:block text-center text-lg mx-72 mt-3 leading-relaxed">
             At
@@ -34,10 +34,10 @@ export default function HeroSection() {
             , we&apos;re redefining agriculture to increase productivity and
             reduce environmental impact.
           </p>
-          <button className="flex items-center gap-2 bg-color4 rounded-full px-6 py-3 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
+          <div className="flex items-center gap-2 bg-color4 rounded-full px-6 py-3 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
             <Link
               href="#products"
-              className="text-slate-800 font-bold text-lg lg:text-xl tracking-wider"
+              className="text-slate-800 font-semibold text-lg lg:text-xl tracking-wider"
             >
               Explore Our Products
             </Link>
@@ -48,7 +48,7 @@ export default function HeroSection() {
               height={1000}
               className="w-[15px]"
             />
-          </button>
+          </div>
         </div>
       </div>
     </div>
