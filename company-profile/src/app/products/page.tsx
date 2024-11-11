@@ -22,7 +22,7 @@ export default async function Products() {
         <h2 className="text-3xl lg:text-6xl font-bold text-color1 text-center mb-5">
           Growing Quality, Cultivating Trust
         </h2>
-        <p className="text-center text-lg lg:text-xl mx-5 lg:mx-52 mb-10 lg:mb-16 text-slate-800">
+        <p className="text-center text-lg lg:text-xl mx-5 lg:mx-52 mb-10 lg:mb-10 text-slate-800">
           At <span className="font-bold">FarmLink</span> Indonesia, we are
           dedicated to providing top-quality agricultural products and
           innovative solutions that support sustainable growth. From fresh

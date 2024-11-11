@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div className="py-36">
       <Image
-        src={"/brown-field.jpg"}
-        alt="brown field image"
+        src={"/field.avif"}
+        alt="field image"
         width={1000}
         height={1000}
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"

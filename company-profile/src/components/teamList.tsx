@@ -29,7 +29,7 @@ export default function TeamList() {
         <h1 className="font-semibold mb-5 text-2xl lg:text-4xl text-slate-800">
           Our Team
         </h1>
-        <p className="text-center font-semibold mb-10 lg:mb-16 lg:mx-20 text-3xl lg:text-5xl text-slate-800">
+        <p className="text-center font-semibold mb-10 lg:mb-20 lg:mx-20 text-3xl lg:text-5xl text-slate-800">
           Meet the passionate team driving sustainable agriculture at{" "}
           <span className="text-color1 font-bold">FarmLink </span>
           Indonesia
