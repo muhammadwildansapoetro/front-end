@@ -20,11 +20,11 @@ export default function TestimonialsSection() {
                 Chef Rina, Owner of Rina&apos;s Kitchen:
               </p>
               <blockquote className="lg:text-xl leading-relaxed">
-                "FarmLink's hydroponic lettuce has transformed the way we
+                &quot;FarmLink's hydroponic lettuce has transformed the way we
                 prepare salads at our restaurant. The quality is consistently
                 fresh, and the flavor is unbea able. It&apos; great knowing
                 we&apos;re serving our customers high-quality, locally grown
-                produce."
+                produce.&quot;
               </blockquote>
             </div>
 
@@ -33,11 +33,11 @@ export default function TestimonialsSection() {
                 Andi, UMKM (Small Business) Owner:
               </h2>
               <blockquote className="lg:text-lg leading-relaxed">
-                "As a small business owner, sourcing fresh and organic
+                &quot;As a small business owner, sourcing fresh and organic
                 ingredients can be a challenge. FarmLink Indonesia has been an
                 incredible partner in providing fresh vegetables and organic
                 brown rice. Their reliable service and quality products make my
-                job so much easier."
+                job so much easier.&quot;
               </blockquote>
             </div>
           </div>
@@ -48,10 +48,11 @@ export default function TestimonialsSection() {
                 Putri, Head Chef at Indramayu Café:
               </h2>
               <blockquote className="lg:text-xl leading-relaxed">
-                "We&apos;ve been using FarmLink&apos;s Gedong Gincu mangoes in
-                our desserts, and they are simply the best. The sweetness and
+                &quot;We&apos;ve been using FarmLink&apos;s Gedong Gincu mangoes
+                in our desserts, and they are simply the best. The sweetness and
                 richness of the fruit have made our menu stand out. We&apos;re
-                so glad to have FarmLink as a trusted supplier for our kitchen."
+                so glad to have FarmLink as a trusted supplier for our
+                kitchen.&quot;
               </blockquote>
             </div>
             <div className="border p-3 max-w-[700px] rounded-xl shadow-lg text-left lg:w-1/2">
@@ -59,10 +60,10 @@ export default function TestimonialsSection() {
                 Denny, Farmer Partner:
               </h2>
               <blockquote className="lg:text-xl leading-relaxed">
-                "Partnering with FarmLink has been a rewarding experience. Their
-                commitment to sustainable practices and innovation in
+                &quot;Partnering with FarmLink has been a rewarding experience.
+                Their commitment to sustainable practices and innovation in
                 agriculture has not only improved the quality of my crops but
-                also helped me expand my reach to more customers."
+                also helped me expand my reach to more customers.&quot;
               </blockquote>
             </div>
           </div>
@@ -72,10 +73,10 @@ export default function TestimonialsSection() {
               Hani, Customer:
             </h2>
             <blockquote className="lg:text-xl leading-relaxed">
-              "I&apos;ve been buying organic brown rice from FarmLink for months
-              now. It&apos;s always fresh, and I love knowing that I&apos;m
-              supporting a company that values sustainability. Highly recommend
-              their products!"
+              &quot;I&apos;ve been buying organic brown rice from FarmLink for
+              months now. It&apos;s always fresh, and I love knowing that
+              I&apos;m supporting a company that values sustainability. Highly
+              recommend their products!&quot;
             </blockquote>
           </div>
         </div>
