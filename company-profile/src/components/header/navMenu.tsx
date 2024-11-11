@@ -13,7 +13,7 @@ export default function NavMenu() {
         <li className="group">
           <Link
             href={"/"}
-            className="flex font-bold mx-4 my-2 lg:text-lg lg:my-0 text-color1 hover:scale-110"
+            className="flex font-bold mx-4 my-2 lg:text-xl lg:my-0 text-color1 lg:hover:opacity-70"
           >
             Home
           </Link>
@@ -21,7 +21,7 @@ export default function NavMenu() {
         <li>
           <Link
             href={"/about"}
-            className="flex font-bold mx-4 my-2 lg:text-lg lg:my-0 text-color1  hover:scale-110"
+            className="flex font-bold mx-4 my-2 lg:text-xl lg:my-0 text-color1  hover:opacity-70"
           >
             About Us
           </Link>
@@ -29,7 +29,7 @@ export default function NavMenu() {
         <li>
           <Link
             href={"/products"}
-            className="flex font-bold mx-4 my-2 lg:text-lg lg:my-0 text-color1 hover:scale-110"
+            className="flex font-bold mx-4 my-2 lg:text-xl lg:my-0 text-color1 hover:opacity-70"
           >
             Products
           </Link>
@@ -37,7 +37,7 @@ export default function NavMenu() {
         <li>
           <Link
             href={"/teams"}
-            className="flex font-bold mx-4 my-2 lg:text-lg lg:my-0 text-color1  hover:scale-110"
+            className="flex font-bold mx-4 my-2 lg:text-xl lg:my-0 text-color1  hover:opacity-70"
           >
             Teams
           </Link>

@@ -8,7 +8,7 @@ export default function Home() {
     <div className="w-full">
       <div className="flex flex-col justify-center items-center">
         <HeroSection />
-        <section id="overview">
+        <section>
           <OverviewSection />
         </section>
         <section id="products" className="w-full">

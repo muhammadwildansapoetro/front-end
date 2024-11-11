@@ -6,6 +6,7 @@ export default function HamburgerClick(hamburgerID: string, navMenuID: string) {
   useEffect(() => {
     const hamburgerMenu = document.querySelector(`#${hamburgerID}`);
     const navMenu = document.querySelector(`#${navMenuID}`);
+    const menuItems = navMenu?.querySelectorAll("Link"); // Select all anchor tags (menu items) inside the navMenu
 
     if (hamburgerMenu && navMenu) {
       const toggleActiveClass = () => {
@@ -15,8 +16,18 @@ export default function HamburgerClick(hamburgerID: string, navMenuID: string) {
 
       hamburgerMenu.addEventListener("click", toggleActiveClass);
 
-      return () =>
+      menuItems?.forEach((item) => {
+        item.addEventListener("click", toggleActiveClass);
+      });
+
+      return () => {
         hamburgerMenu.removeEventListener("click", toggleActiveClass);
+        if (menuItems) {
+          menuItems.forEach((item) => {
+            item.removeEventListener("click", toggleActiveClass);
+          });
+        }
+      };
     }
   }, [hamburgerID, navMenuID]);
 }

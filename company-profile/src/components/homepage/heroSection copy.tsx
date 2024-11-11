@@ -6,26 +6,18 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div>
-      <Image
-        alt="field image"
-        src={"/field.avif"}
-        quality={100}
-        fill
-        style={{
-          objectFit: "cover",
-        }}
-        className="relative w-full h-screen flex items-start justify-center blur-[2px]"
-      />
+    <div className="relative w-full h-screen bg-cover bg-center bg-[url('/field.avif')] flex items-start justify-center">
+      <div className="absolute inset-0 w-full h-full bg-cover bg-center backdrop-blur-[2px]"></div>
+
       <div className="container mx-auto">
-        <div className="relative flex flex-col items-start lg:items-center top-24 lg:top-28">
+        <div className="relative flex flex-col items-start lg:items-center top-24 lg:top-28 z-10 ">
           <h1 className="text-6xl tracking-wide mx-5 lg:text-7xl font-bold text-color1">
             Cultivating a Sustainable Future
           </h1>
-          <h2 className="text-2xl tracking-wide mx-5 lg:text-4xl lg:text-center font-semibold mt-3 text-color1 ">
+          <h2 className="text-2xl tracking-wide mx-5 lg:text-4xl font-semibold mt-3 text-color1 ">
             Empowering Sustainable Agriculture Through Innovation
           </h2>
-          <p className="hidden text-gray-700 lg:block text-center text-xl mt-3 leading-relaxed">
+          <p className="hidden font-semibold text-gray-700 lg:block text-center text-lg mx-72 mt-3 leading-relaxed">
             At
             <span className="font-bold text-color1"> FarmLink</span>, we
             understand that
@@ -33,9 +25,14 @@ export default function HeroSection() {
               {" "}
               sustainable agriculture
             </span>{" "}
-            is essential to overcoming today&apos;s global challenges
-            <br />
-            —climate change, food security, and population growth.
+            is essential to overcoming today&apos;s global challenges—climate
+            change, food security, and population growth. Through advanced
+            technology and{" "}
+            <span className="font-bold text-color1">
+              eco-friendly practices
+            </span>
+            , we&apos;re redefining agriculture to increase productivity and
+            reduce environmental impact.
           </p>
           <div className="flex items-center gap-2 bg-color4 rounded-full px-6 py-3 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
             <Link

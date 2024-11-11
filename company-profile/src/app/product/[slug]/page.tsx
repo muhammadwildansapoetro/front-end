@@ -5,10 +5,10 @@ import {
   Options,
 } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
-import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+// Static params for dynamic routes
 export const generateStaticParams = async () => {
   const products: IProduct[] = await getProducts();
 
@@ -17,6 +17,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
+// Generate metadata for the page
 export async function generateMetadata({
   params,
 }: {
@@ -27,6 +28,9 @@ export async function generateMetadata({
   return {
     title: product.fields.name,
     description: product.fields.tagline,
+    openGraph: {
+      images: [`https:${product.fields.image.fields.file.url}`],
+    },
   };
 }
 
@@ -40,7 +44,7 @@ export default async function ProductDetail({
   const options: Options = {
     renderNode: {
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h4 className="mt-10 mb-2 text-2xl lg:text-2xl">{children}</h4>
+        <h4 className="mt-10 mb-3 text-2xl lg:text-3xl">{children}</h4>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <p className="text-lg lg:text-xl">{children}</p>
@@ -54,7 +58,7 @@ export default async function ProductDetail({
   return (
     <div className="py-36">
       <div className="container mx-auto">
-        <div className="mx-5 last:lg:mx-20">
+        <div className="mx-5 lg:mx-40">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-3xl lg:text-4xl font-semibold  text-slate-800 mb-2">
               {product.fields.name}
@@ -73,19 +77,22 @@ export default async function ProductDetail({
               </Link>
             </div>
 
-            <Image
-              src={`https:${product.fields.image.fields.file.url}`}
-              alt={product.fields.name}
-              width={1000}
-              height={1000}
-              className="rounded-lg w-[400px0 h-[200p]"
-            />
+            <div className="rounded-lg w-full h-[650px] overflow-hidden flex justify-center">
+              <Image
+                src={`https:${product.fields.image.fields.file.url}`}
+                alt={product.fields.name}
+                width={1000}
+                height={1000}
+                className="object-cover"
+              />
+            </div>
+
             <div className="mt-10 lg:mx-56">
               {documentToReactComponents(product.fields.description, options)}
             </div>
           </div>
 
-          <div className="flex justify-start lg:mx-56 mt-10">
+          <div className="flex justify-center lg:mx-56 mt-20">
             <Link
               href={"https://wa.me/6285719960008"}
               target="_blank"
