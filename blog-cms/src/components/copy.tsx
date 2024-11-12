@@ -12,10 +12,16 @@ export default function CopyButton({ link }: { link: string }) {
       onClick={() => {
         copy(link);
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        // setTimeout(() => setCopied(false), 2000);
       }}
+      onMouseLeave={() => setCopied(false)}
+      data-cy="copy-button"
     >
-      {copied ? <IoCheckmarkCircleOutline /> : <IoLink />}
+      {copied ? (
+        <IoCheckmarkCircleOutline data-cy="check-icon" />
+      ) : (
+        <IoLink data-cy="link-icon" />
+      )}
     </div>
   );
 }

@@ -11,14 +11,16 @@ export default async function BlogSection() {
         <h1 className="text-center font-bold text-3xl lg:text-6xl mb-5">
           Our Articles
         </h1>
-        <div className="flex flex-wrap justify-center items-center lg:justify-start ">
+
+        <div className="flex flex-wrap gap-x-[24px]">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col group rounded-xl shadow-lg m-5 border bg-white border-slate-300 overflow-hidden w-[450px] h-[600px]"
+                data-cy="blog-item"
+                className="flex flex-col group rounded-xl shadow-lg my-5 border bg-white border-slate-300 overflow-hidden mx-5 lg:mx-0 lg:w-[calc(33.33%-16px)]"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden aspect-square w-full">
                   <div className="absolute font-semibold left-5 mt-5 bg-white bg-opacity-90 rounded-full px-3 text-slate-800">
                     {item.fields.category}
                   </div>
@@ -27,7 +29,7 @@ export default async function BlogSection() {
                     alt="thumbnail"
                     width={1000}
                     height={1000}
-                    className="object-cover lg:group-hover:scale-105 h-[400px]"
+                    className="object-cover lg:group-hover:scale-105"
                   />
                 </div>
 
@@ -54,10 +56,10 @@ export default async function BlogSection() {
                   </div>
                 </div>
 
-                <div className="flex mx-5 mt-3">
+                <div className="flex mx-5 mt-3 mb-5">
                   <Link
                     href={`/blog/${item.fields.slug}`}
-                    className="bg-black rounded-full px-5 py-2 text-white font-bold lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-teal-500 lg:hover:bg-opacity-70"
+                    className="bg-black rounded-full px-5 py-2 text-white font-bold lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-green-500 lg:hover:bg-opacity-70"
                   >
                     Read Article
                   </Link>

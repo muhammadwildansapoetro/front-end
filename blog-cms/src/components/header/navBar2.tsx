@@ -36,7 +36,7 @@ export default function NavBar() {
       <div className="container mx-auto">
         <div className="flex items-center justify-between relative px-5 py-2 lg:mx-32">
           <Link
-            href={"/about"}
+            href={"/"}
             className="font-semibold text-black lg:hover:opacity-70 lg:text-lg"
           >
             Muhammadwildansapoetro

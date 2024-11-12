@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/header/navBar2tsx"
+    "src/components/header/navBar2tsx",
+    "cypress/components/.cy.tsx"
   ],
   "exclude": ["node_modules"]
 }
