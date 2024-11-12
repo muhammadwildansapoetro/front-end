@@ -20,8 +20,8 @@ export default function TestimonialsSection() {
                 Chef Rina, Owner of Rina&apos;s Kitchen:
               </p>
               <blockquote className="lg:text-xl leading-relaxed">
-                &quot;FarmLink's hydroponic lettuce has transformed the way we
-                prepare salads at our restaurant. The quality is consistently
+                &quot;FarmLink&apos;s hydroponic lettuce has transformed the way
+                we prepare salads at our restaurant. The quality is consistently
                 fresh, and the flavor is unbea able. It&apos; great knowing
                 we&apos;re serving our customers high-quality, locally grown
                 produce.&quot;

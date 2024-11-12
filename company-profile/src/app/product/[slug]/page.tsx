@@ -17,13 +17,11 @@ export const generateStaticParams = async () => {
   }));
 };
 
+type Params = Promise<{ slug: string }>;
+
 // Generate metadata for the page
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const product: IProduct = await getProductSlug(params.slug);
+export async function generateMetadata({ params }: { params: Params }) {
+  const product: IProduct = await getProductSlug((await params).slug);
 
   return {
     title: product.fields.name,
@@ -34,12 +32,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductDetail({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const product: IProduct = await getProductSlug(params.slug);
+export default async function ProductDetail({ params }: { params: Params }) {
+  const product: IProduct = await getProductSlug((await params).slug);
 
   const options: Options = {
     renderNode: {
