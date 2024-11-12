@@ -9,6 +9,7 @@ export default function About() {
         width={1000}
         height={1000}
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
+        priority
       />
       <div className="container mx-auto mt-24 lg:mt-64">
         <h1 className="font-semibold text-2xl lg:text-4xl text-center mb-5 text-slate-800">

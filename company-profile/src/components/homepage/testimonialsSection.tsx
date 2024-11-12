@@ -5,7 +5,7 @@ export default function TestimonialsSection() {
   return (
     <div className="py-20">
       <div className="container mx-aut0">
-        <div className="flex flex-col items-center mx-5 lg:mx-10">
+        <div className="flex flex-col items-center mx-5 lg:mx-12">
           <h1 className="font-semibold text-2xl lg:text-4xl mb-5 text-slate-800">
             What Our Customers Are Saying
           </h1>
