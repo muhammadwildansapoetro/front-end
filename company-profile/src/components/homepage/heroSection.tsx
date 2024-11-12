@@ -37,7 +37,7 @@ export default function HeroSection() {
             <br />
             —climate change, food security, and population growth.
           </p>
-          <div className="flex items-center gap-2 bg-color4 rounded-full px-6 py-3 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1">
+          <div className="flex items-center gap-2 bg-color4 rounded-full px-6 py-3 shadow-lg mt-5 mx-5 hover:bg-[#f0bb03] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color1 lg:hover:cursor-pointer">
             <Link
               href="#products"
               className="text-slate-800 font-semibold text-lg lg:text-xl tracking-wider"

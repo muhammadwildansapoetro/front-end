@@ -66,7 +66,11 @@ export default function Footer() {
           <div className="mx-5 ">
             <div className="font-semibold mb-2">Connect with us</div>
             <div className="flex gap-3">
-              <Link href={"https://wa.me/6285719960008"} target="_blank">
+              <Link
+                href={"https://wa.me/6285719960008"}
+                target="_blank"
+                aria-label="Chat our whatsapp"
+              >
                 <FaWhatsapp size={25} className="lg:hover:text-green-500" />
               </Link>
               <FaFacebook size={25} className="hover:text-blue-500" />

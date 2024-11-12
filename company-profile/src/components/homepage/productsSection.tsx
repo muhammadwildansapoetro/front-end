@@ -56,7 +56,7 @@ export default async function ProductsSection() {
                     href={`/product/${item.fields.slug}`}
                     className="text-lg font-semibold rounded-full bg-color4 lg:hover:bg-[#f0bb03] shadow-lg px-4 py-1"
                   >
-                    Learn more
+                    Product Details
                   </Link>
                   <Link
                     href={"https://wa.me/6282240955597"}
