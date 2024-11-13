@@ -36,9 +36,9 @@ export default function TeamList() {
         </p>
 
         {loading ? (
-          <div className="loader"></div>
+          <div>Loading...</div>
         ) : (
-          <div className="flex flex-wrap justify-evenly gap-10 lg:mx-16">
+          <div className="flex flex-wrap justify-evenly gap-10 lg:mx-16 ">
             {teams.map((person, index) => (
               <div key={index} className="flex flex-col items-center">
                 <Image
