@@ -47,6 +47,7 @@ export default async function Products() {
                   alt={item.fields.name}
                   width={1000}
                   height={1000}
+                  quality={100}
                   className="object-cover h-[400px] lg:h-[300px] mt-5 rounded-xl"
                 />
                 <div className="flex justify-center mt-5 mb-10 gap-10">
@@ -54,7 +55,7 @@ export default async function Products() {
                     href={`/product/${item.fields.slug}`}
                     className="lg:text-lg font-semibold rounded-full bg-color4 lg:hover:bg-[#f0bb03] shadow-lg px-4 py-1"
                   >
-                    Learn more
+                    Product Details
                   </Link>
                   <Link
                     href={"https://wa.me/6282240955597"}

@@ -9,6 +9,7 @@ export default function Teams() {
         alt="tractor image"
         width={1000}
         height={1000}
+        quality={100}
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
       />
       <TeamList />

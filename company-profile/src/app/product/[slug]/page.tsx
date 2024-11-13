@@ -77,6 +77,7 @@ export default async function ProductDetail({ params }: { params: Params }) {
                 alt={product.fields.name}
                 width={1000}
                 height={1000}
+                quality={100}
                 className="object-cover"
               />
             </div>
