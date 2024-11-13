@@ -46,7 +46,7 @@ export default function TeamList() {
                   alt={`${person.name.first} ${person.name.last}`}
                   width={200}
                   height={200}
-                  className="rounded-full hidden lg:flex lg:rounded-xl shadow-lg mb-3 lg:hover:scale-110 "
+                  className="rounded-full shadow-lg mb-3 lg:hover:scale-110 "
                 />
                 <p className="font-bold text-xl">{`${person.name.first} ${person.name.last}`}</p>
                 <p className="text-lg">{person.email}</p>
