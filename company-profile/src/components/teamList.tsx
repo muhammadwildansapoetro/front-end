@@ -6,14 +6,14 @@ import Image from "next/image";
 
 export default function TeamList() {
   const [teams, setTeams] = useState<ITeam[]>([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const fetchTeams = async () => {
     try {
       const response = await fetch("https://randomuser.me/api/?results=10");
       const data = await response.json();
       setTeams(data.results);
-      // setLoading(false);
+      setLoading(false);
     } catch (error) {
       console.log("Error fetching user data:", error);
     }
@@ -34,13 +34,11 @@ export default function TeamList() {
           <span className="text-color1 font-bold">FarmLink </span>
           Indonesia
         </p>
-
-        {/* {loading ? (
-          <div className="loader"></div>
-        ) : ( */}
-        {
-          <div className="flex flex-wrap justify-center lg:justify-evenly items-center gap-10 lg:mx-16 ">
-            {teams.map((person, index) => (
+        <div className="flex flex-wrap justify-center lg:justify-evenly items-center gap-10 lg:mx-16 ">
+          {loading ? (
+            <div className="loader"></div>
+          ) : (
+            teams.map((person, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center min-h-[300px] w-[200px]"
@@ -57,9 +55,9 @@ export default function TeamList() {
                   {person.email}
                 </p>
               </div>
-            ))}
-          </div>
-        }
+            ))
+          )}
+        </div>
       </div>
     </div>
   );
