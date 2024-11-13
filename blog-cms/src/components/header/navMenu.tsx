@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import ButtonSignin from "./buttonSignIn";
-import { DiVim } from "react-icons/di";
 import supabase from "@/services/supabase";
 import { useEffect, useState } from "react";
 import { User } from "@supabase/supabase-js";

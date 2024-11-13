@@ -3,11 +3,8 @@
 import HamburgerMenu from "./hamburgerMenu";
 import NavMenu from "./navMenu";
 import HamburgerClick from "./hamburgerClick";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
-import supabase from "@/services/supabase";
-import { IUser } from "@/types/user";
-import { User } from "@supabase/supabase-js";
 
 export default function NavBar() {
   HamburgerClick("hamburger", "nav-menu");
