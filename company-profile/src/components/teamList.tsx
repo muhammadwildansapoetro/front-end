@@ -35,28 +35,35 @@ export default function TeamList() {
           Indonesia
         </p>
         <div className="flex flex-wrap justify-center lg:justify-evenly items-center gap-10 lg:mx-16 ">
-          {loading ? (
-            <div className="loader"></div>
-          ) : (
-            teams.map((person, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center min-h-[300px] w-[200px]"
-              >
-                <Image
-                  src={person.picture.large}
-                  alt={`${person.name.first} ${person.name.last}`}
-                  width={200}
-                  height={200}
-                  className="rounded-full lg:rounded-xl shadow-lg mb-3"
-                />
-                <p className="font-bold text-xl min-h-[30px] text-center">{`${person.name.first} ${person.name.last}`}</p>
-                <p className="text-lg text-center min-h-[24px]">
-                  {person.email}
-                </p>
-              </div>
-            ))
-          )}
+          {loading
+            ? Array.from({ length: 10 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center min-h-[300px] w-[200px] animate-pulse"
+                >
+                  <div className="rounded-full lg:rounded-xl bg-gray-300 h-[200px] w-[200px] mb-3"></div>
+                  <div className="bg-gray-300 h-[30px] w-[150px] mb-2 rounded"></div>
+                  <div className="bg-gray-300 h-[24px] w-[180px] rounded"></div>
+                </div>
+              ))
+            : teams.map((person, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center min-h-[300px] w-[200px]"
+                >
+                  <Image
+                    src={person.picture.large}
+                    alt={`${person.name.first} ${person.name.last}`}
+                    width={200}
+                    height={200}
+                    className="rounded-full lg:rounded-xl shadow-lg mb-3"
+                  />
+                  <p className="font-bold text-xl min-h-[30px] text-center">{`${person.name.first} ${person.name.last}`}</p>
+                  <p className="text-lg text-center min-h-[24px]">
+                    {person.email}
+                  </p>
+                </div>
+              ))}
         </div>
       </div>
     </div>
