@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "images.ctfassets.net" }],
+    remotePatterns: [
+      { hostname: "images.ctfassets.net" },
+      { hostname: "lh3.googleusercontent.com" },
+    ],
   },
 };
 

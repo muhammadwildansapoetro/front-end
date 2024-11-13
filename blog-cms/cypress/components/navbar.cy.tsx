@@ -1,4 +1,4 @@
-import NavBar from "@/components/header/navBar2";
+import NavBar from "@/components/header/navBar";
 
 describe("NavBar Component", () => {
   it("render component correctly", () => {
