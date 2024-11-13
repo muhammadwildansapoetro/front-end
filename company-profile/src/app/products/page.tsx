@@ -51,10 +51,12 @@ export default async function Products() {
                 <Image
                   src={`https:${item.fields.image.fields.file.url}`}
                   alt={item.fields.name}
-                  width={1000}
-                  height={1000}
-                  quality={100}
+                  width={800} // Set a reasonable width for the image
+                  height={600} // Set the corresponding height for aspect ratio
+                  quality={75} // Reduce quality for smaller image size
                   className="object-cover h-[400px] lg:h-[300px] mt-5 rounded-xl"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 33vw" // Adjust size based on viewport
+                  priority // Use priority for above-the-fold images to improve load time
                 />
                 <div className="flex justify-center mt-5 mb-10 gap-10">
                   <Link
