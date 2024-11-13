@@ -38,15 +38,18 @@ export default function TeamList() {
         {loading ? (
           <div className="loader"></div>
         ) : (
-          <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center lg:justify-evenly items-center gap-10 lg:mx-16 ">
+          <div className="flex flex-col justify-center lg:justify-evenly items-center gap-10 lg:mx-16 ">
             {teams.map((person, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div
+                key={index}
+                className="flex flex-col items-center min-h-[300px] w-[200px]"
+              >
                 <Image
                   src={person.picture.large}
                   alt={`${person.name.first} ${person.name.last}`}
                   width={200}
                   height={200}
-                  className="rounded-full shadow-lg mb-3 lg:hover:scale-110 "
+                  className="rounded-full shadow-lg mb-3 lg:hover:scale-110"
                 />
                 <p className="font-bold text-xl">{`${person.name.first} ${person.name.last}`}</p>
                 <p className="text-lg">{person.email}</p>
