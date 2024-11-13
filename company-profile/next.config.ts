@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [{ hostname: "images.ctfassets.net" }, { hostname: "randomuser.me" }],
   },
+
+  reactStrictMode: true,
+  experimental: { optimizeCss: true }
 };
 
 export default nextConfig;
