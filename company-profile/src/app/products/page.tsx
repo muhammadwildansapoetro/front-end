@@ -12,7 +12,9 @@ export default async function Products() {
         src={"/wheat.jpg"}
         alt="wheat image"
         width={1000}
-        height={1000}
+        height={3500}
+        priority
+        quality={75}
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
       />
       <div className="container mx-auto">

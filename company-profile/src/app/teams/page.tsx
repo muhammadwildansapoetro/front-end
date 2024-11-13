@@ -3,16 +3,18 @@ import Image from "next/image";
 
 export default function Teams() {
   return (
-    <div className="py-36">
-      <Image
-        src={"/tractor.jpg"}
-        alt="tractor image"
-        quality={100}
-        width={500}
-        height={500}
-        priority
-        className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
-      />
+    <div className="">
+      <div className="relative w-full h-[200px] lg:h-[350px]">
+        <Image
+          src="/tractor.jpg"
+          alt="tractor image"
+          priority
+          quality={75} // Reduces file size without significant quality loss
+          fill // Enables responsive resizing
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Serve different image sizes based on viewport width
+          className="object-cover"
+        />
+      </div>
       <TeamList />
     </div>
   );
