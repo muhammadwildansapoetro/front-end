@@ -7,9 +7,9 @@ export default function Teams() {
       <Image
         src={"/tractor.jpg"}
         alt="tractor image"
-        width={1000}
-        height={1000}
         quality={100}
+        width={500}
+        height={500}
         priority
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
       />
