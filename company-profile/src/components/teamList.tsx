@@ -44,8 +44,8 @@ export default function TeamList() {
                 <Image
                   src={person.picture.large}
                   alt={`${person.name.first} ${person.name.last}`}
-                  width={10000}
-                  height={10000}
+                  width={1000}
+                  height={1000}
                   className="rounded-full lg:rounded-xl max-w-[200px] shadow-lg mb-3 lg:hover:scale-110 "
                 />
                 <p className="font-bold text-xl">{`${person.name.first} ${person.name.last}`}</p>
