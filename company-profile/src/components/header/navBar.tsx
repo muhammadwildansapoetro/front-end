@@ -10,15 +10,6 @@ export default function NavBar() {
   useHamburgerClick("hamburger", "nav-menu");
 
   useEffect(() => {
-    // Dynamically import HamburgerClick inside an async function
-    const initializeHamburgerClick = async () => {
-      const { default: HamburgerClick } = await import("./hamburgerClick");
-      HamburgerClick("hamburger", "nav-menu");
-    };
-
-    // Call the async function to initialize HamburgerClick
-    initializeHamburgerClick();
-
     if (typeof window !== "undefined") {
       window.onscroll = function () {
         const header = document.querySelector("header") as HTMLElement | null;

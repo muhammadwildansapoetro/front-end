@@ -13,10 +13,11 @@ export default async function Products() {
           src={"/wheat.jpg"}
           alt="wheat image"
           priority
-          quality={75} // Reduces file size without significant quality loss
+          quality={75} // Keep this for reduced file size without noticeable quality loss
           fill // Enables responsive resizing
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Serve different image sizes based on viewport width
           className="object-cover"
+          loading="eager" // Prioritize this image load for LCP
         />
       </div>
 
