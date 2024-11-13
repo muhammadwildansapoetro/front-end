@@ -2,14 +2,23 @@
 
 import HamburgerMenu from "./hamburgerMenu";
 import NavMenu from "./navMenu";
-import HamburgerClick from "./hamburgerClick";
 import Logo from "./logo";
 import { useEffect } from "react";
+import useHamburgerClick from "./hamburgerClick";
 
 export default function NavBar() {
-  HamburgerClick("hamburger", "nav-menu");
+  useHamburgerClick("hamburger", "nav-menu");
 
   useEffect(() => {
+    // Dynamically import HamburgerClick inside an async function
+    const initializeHamburgerClick = async () => {
+      const { default: HamburgerClick } = await import("./hamburgerClick");
+      HamburgerClick("hamburger", "nav-menu");
+    };
+
+    // Call the async function to initialize HamburgerClick
+    initializeHamburgerClick();
+
     if (typeof window !== "undefined") {
       window.onscroll = function () {
         const header = document.querySelector("header") as HTMLElement | null;

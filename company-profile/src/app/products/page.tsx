@@ -7,16 +7,19 @@ export default async function Products() {
   const product: IProduct[] = await getProducts();
 
   return (
-    <div className="py-36">
-      <Image
-        src={"/wheat.jpg"}
-        alt="wheat image"
-        width={1000}
-        height={3500}
-        priority
-        quality={75}
-        className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
-      />
+    <div className="">
+      <div className="relative w-full h-[200px] lg:h-[350px]">
+        <Image
+          src={"/wheat.jpg"}
+          alt="wheat image"
+          priority
+          quality={75} // Reduces file size without significant quality loss
+          fill // Enables responsive resizing
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Serve different image sizes based on viewport width
+          className="object-cover"
+        />
+      </div>
+
       <div className="container mx-auto">
         <h1 className="font-semibold text-2xl lg:text-4xl text-center mb-5 text-slate-800 mt-24 lg:mt-64">
           Our Products

@@ -75,10 +75,12 @@ export default async function ProductDetail({ params }: { params: Params }) {
               <Image
                 src={`https:${product.fields.image.fields.file.url}`}
                 alt={product.fields.name}
-                width={1000}
-                height={1000}
-                quality={100}
+                width={1200} // Use the maximum width you'd like for large screens
+                height={650} // Use a height that fits the image aspect ratio
+                quality={75} // Use lower quality for better performance
+                priority
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px" // Dynamically adjusts image size based on screen width
               />
             </div>
 
