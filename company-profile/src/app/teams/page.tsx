@@ -10,6 +10,7 @@ export default function Teams() {
         width={1000}
         height={1000}
         quality={100}
+        priority
         className="absolute top-0 w-full h-[200px] lg:h-[350px] object-cover"
       />
       <TeamList />
