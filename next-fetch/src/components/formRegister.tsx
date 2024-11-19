@@ -1,10 +1,11 @@
 "use client";
 
+import action from "@/app/action";
 import { Field, Form, Formik, FormikProps } from "formik";
 import * as Yup from "yup";
 
 const RegisterSchema = Yup.object().shape({
-  username: Yup.string().required("Username is required"),
+  name: Yup.string().required("Name is required"),
   email: Yup.string()
     .email("Invalid email format")
     .required("Email is required"),
@@ -14,24 +15,26 @@ const RegisterSchema = Yup.object().shape({
 });
 
 interface FormValue {
-  username: string;
+  name: string;
   email: string;
   password: string;
 }
 
 function FormRegister() {
   const initialValue: FormValue = {
-    username: "",
+    name: "",
     email: "",
     password: "",
   };
 
   const handleAdd = async (user: FormValue) => {
     try {
-      await fetch("http://localhost:2000/users", {
+      await fetch("http://localhost:8000/api/users", {
         method: "POST",
         body: JSON.stringify(user),
+        headers: { "content-type": "application/json" },
       });
+      action("users");
       alert("User added successfully");
     } catch (error) {
       console.log(error);
@@ -55,21 +58,19 @@ function FormRegister() {
             return (
               <Form className="flex flex-col gap-2 ">
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="username" className="font-bold">
-                    Username
+                  <label htmlFor="name" className="font-bold">
+                    Name
                   </label>
                   <Field
                     type="text"
-                    name="username"
+                    name="name"
                     onChange={handleChange}
-                    value={values.username}
+                    value={values.name}
                     className="border p-[1px] border-slate-500 rounded-md py-2"
-                    placeholder=" Enter your username"
+                    placeholder=" Enter your name"
                   />
-                  {touched.username && errors.username ? (
-                    <div className="text-red-500 text-xs">
-                      {errors.username}
-                    </div>
+                  {touched.name && errors.name ? (
+                    <div className="text-red-500 text-xs">{errors.name}</div>
                   ) : null}
                 </div>
 
@@ -110,8 +111,7 @@ function FormRegister() {
                 </div>
                 <button
                   type="submit"
-                  className="font-bold bg-teal-500 text-white rounded-md py-2 hover:bg-teal-600 hover:scale-95 mt-3"
-                  onClick={() => handleAdd(values)}
+                  className="font-bold bg-teal-500 text-white rounded-md py-2 hover:bg-teal-600 mt-3"
                 >
                   Register
                 </button>
