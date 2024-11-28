@@ -1,40 +1,58 @@
 import Link from "next/link";
+import About from "./about";
 
 export default function Hero() {
   return (
-    <div className="container border border-slate-500">
-      <div className="flex flex-wrap justify-center items-center mx-10 p-5 border border-slate-500">
-        <div className="border border-transparent">
-          <img
-            src="/photo-wildan.jpeg"
-            alt="Foto Wildan"
-            className="w-[200px] border rounded-full"
-          />
-        </div>
-
-        <div className="flex flex-col p-5 border border-transparent">
-          <div className="text-3xl lg:text-6xl border border-transparent">
-            Hello, I'm Muhammad Wildan.
+    <section
+      id="hero"
+      className="h-dvh w-screen flex items-center justify-center"
+    >
+      <div className="container">
+        <div className="flex flex-col m-5">
+          <div className="text-4xl font-bold lg:text-7xl lg:text-center text-slate-800">
+            Hello, I'm{" "}
+            <span>
+              <Link
+                href={"#about"}
+                className="hover:text-blue-700 hover:text-[73px]"
+              >
+                Muhammad Wildan
+              </Link>
+            </span>
+            .
           </div>
 
-          <div className="flex justify-start">
-            <div className="text-xl lg:text-3xl mt-1 border border-transparent">
-              Creating Accessible and User-Friendly Web{" "}
-              <span className="text-teal-500">Solutions</span>.
+          <div className="text-2xl mt-2 font-medium lg:text-4xl lg:text-center lg:mx-72 text-slate-700">
+            A full-stack web developer, based in Bandung - Indonesia.
+          </div>
+
+          <div className="text-xl mt-4 lg:text-3xl lg:text-center lg:mx-80 text-slate-600">
+            Eager to contribute to impactful projects, I&apos;m dedicated to
+            learning, creating, and collaborating to craft meaningful web
+            experiences.
+          </div>
+
+          <div className="flex lg:justify-center mt-5 lg:mt-10">
+            <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 lg:justify-center items-start lg:items-center">
+              <Link
+                href={"#project"}
+                type="button"
+                className="text-white bg-blue-700 border border-blue-700 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm lg:text-lg px-5 py-2 shadow-md shadow-blue-300"
+              >
+                Let&apos;s Collaborate
+              </Link>
+
+              <Link
+                href={"#project"}
+                type="button"
+                className="text-blue-700 bg-white border border-blue-700 hover:bg-blue-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm lg:text-lg px-5 py-2 shadow-md shadow-blue-300"
+              >
+                View My Work
+              </Link>
             </div>
-          </div>
-
-          <div className="text-md lg:text-xl mt-5 border border-transparent">
-            Eager to contribute in impactful projects while growing my web
-            development expertise. <br /> Learning and developing every day to
-            create user-centered, accessible websites.
-          </div>
-
-          <div className="text-xl mt-5 w-fit border px-3 py-1 rounded-full bg-teal-500 hover:bg-teal-600 text-white">
-            <Link href="#project">See My Project</Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
