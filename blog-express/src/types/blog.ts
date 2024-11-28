@@ -12,7 +12,7 @@ export interface IBlog {
   image: string;
   category: string;
   slug: string;
-  content: Document;
+  content: string;
   createdAt: string;
   user: IUser;
 }
