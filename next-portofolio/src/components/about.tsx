@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function About() {
   return (
     <section
@@ -5,8 +7,8 @@ export default function About() {
       className="h-dvh w-screen flex items-center justify-center"
     >
       <div className="container">
-        <div className="mx-5 lg:mx-56">
-          <h1 className="text-2xl lg:text-4xl font-bold lg:text-center">
+        <div className="">
+          <h1 className="text-2xl lg:text-9xl font-bold lg:text-center">
             About Me
           </h1>
 
