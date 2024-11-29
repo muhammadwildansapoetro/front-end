@@ -10,8 +10,6 @@ export default async function BlogContent({
 }) {
   const blog: IBlog = await getBlogSlug(params.slug);
 
-  console.log(blog.content);
-
   return (
     <div className="mx-5 mt-5 flex flex-col items-center lg:mx-96 lg:mt-40">
       <h1 className="text-2xl font-bold lg:text-3xl">{blog.title}</h1>
