@@ -1,0 +1,9 @@
+1. npx create-next-app@14
+
+2. project name
+
+3. yes all
+
+4. npm install -D prettier prettier-plugin-tailwindcss
+
+5. 
