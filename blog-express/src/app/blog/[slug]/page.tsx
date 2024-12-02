@@ -2,6 +2,7 @@ import { getBlogSlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function BlogContent({
   params,
@@ -11,18 +12,25 @@ export default async function BlogContent({
   const blog: IBlog = await getBlogSlug(params.slug);
 
   return (
-    <div className="mx-5 mt-5 flex flex-col items-center lg:mx-96 lg:mt-40">
+    <div className="mx-5 my-20 mb-20 mt-10 flex flex-col items-start lg:mx-72">
+      <Link href={"/"} className="font-bold">
+        Back
+      </Link>
+
       <h1 className="text-2xl font-bold lg:text-3xl">{blog.title}</h1>
-      <div>{blog.category}</div>
+
+      <div>Category: {blog.category}</div>
+
       <Image
         src={`${blog.image}`}
         alt="image"
         width={500}
         height={500}
-        className="lg:w-full"
+        className="aspect-video object-cover lg:w-full"
       />
-      <div>{blog.user.username}</div>
-      <div>{documentToReactComponents(JSON.parse(blog.content))}</div>
+      <p>Author: {blog.user.username}</p>
+
+      <div>{documentToReactComponents(blog.content)}</div>
     </div>
   );
 }

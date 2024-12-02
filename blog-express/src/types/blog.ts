@@ -12,7 +12,19 @@ export interface IBlog {
   image: string;
   category: string;
   slug: string;
-  content: string;
+  content: Document;
   createdAt: string;
   user: IUser;
+}
+
+export interface IRegister {
+  username: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
+
+export interface ISignIn {
+  data: string;
+  password: string;
 }
