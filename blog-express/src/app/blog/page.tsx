@@ -10,10 +10,6 @@ export default async function BlogList() {
   return (
     <div className="mb-20 mt-10 flex w-screen lg:justify-center">
       <div className="container mx-auto">
-        <div className="mb-10 flex justify-center">
-          <Avatar />
-        </div>
-
         <div className="mx-5 mb-10 text-center">
           <h1 className="text-4xl font-bold lg:text-5xl">Ngariung Blog</h1>
           <p className="mt-2 text-lg font-medium lg:text-xl">

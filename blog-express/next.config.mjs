@@ -3,9 +3,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
         hostname: "muhammadwildansapoetro-blog.vercel.app",
       },
+      {
+        hostname: "cdn-icons-png.flaticon.com",
+      },
+      { hostname: "res.cloudinary.com" },
     ],
   },
 };

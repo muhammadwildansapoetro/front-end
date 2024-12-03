@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NavBar from "@/components/navBar";
+import { SessionProvider } from "@/context/useSession";
 
 export const metadata: Metadata = {
   title: "Ngariung Blog",
@@ -20,14 +22,16 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <ToastContainer
-          draggable
-          closeOnClick
-          autoClose={5000}
-          theme="dark"
-          position="top-right"
-        />
-        {children}
+        <SessionProvider>
+          <NavBar />
+          <ToastContainer
+            draggable
+            closeOnClick
+            autoClose={10000}
+            position="top-right"
+          />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

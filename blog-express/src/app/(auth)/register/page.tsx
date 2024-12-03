@@ -1,6 +1,5 @@
 "use client";
 
-import action from "@/app/action";
 import { IRegister } from "@/types/blog";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useState } from "react";
@@ -52,7 +51,7 @@ export default function SignIn() {
 
   return (
     <div className="flex justify-center">
-      <div className="mt-10 w-[500px] rounded-lg border border-slate-300 p-5 shadow-lg">
+      <div className="mt-10 w-[500px] p-5 lg:rounded-lg lg:border lg:border-slate-300 lg:shadow-lg">
         <h1 className="mb-5 text-2xl font-bold">Register</h1>
         <Formik
           initialValues={initialValue}
