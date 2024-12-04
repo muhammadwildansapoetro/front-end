@@ -1,5 +1,6 @@
 "use client";
 
+import { useSession } from "@/context/useSession";
 import { ISignIn } from "@/types/blog";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
@@ -16,6 +17,7 @@ const RegisterSchema = Yup.object().shape({
 
 export default function SignIn() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { setIsAuth, setUser } = useSession();
   const router = useRouter();
   const initialValue: ISignIn = {
     data: "",
@@ -35,6 +37,8 @@ export default function SignIn() {
       const result = await res.json();
       if (!res.ok) throw await result;
       router.push("/");
+      setIsAuth(true);
+      setUser(result.user);
       toast.success(result.message);
     } catch (error: any) {
       console.log(error);

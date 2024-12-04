@@ -1,5 +1,6 @@
 import { IUser } from "@/types/blog";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -76,7 +77,7 @@ const AvatarMenu = ({
                 onClick={onSignOut}
                 className="block w-full px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-300 hover:text-gray-900"
               >
-                Logout
+                Sign out
               </button>
             </li>
           </ul>

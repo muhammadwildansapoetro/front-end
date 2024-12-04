@@ -27,8 +27,8 @@ export default function RootLayout({
           <ToastContainer
             draggable
             closeOnClick
-            autoClose={10000}
-            position="top-right"
+            autoClose={5000}
+            position="bottom-right"
           />
           {children}
         </SessionProvider>

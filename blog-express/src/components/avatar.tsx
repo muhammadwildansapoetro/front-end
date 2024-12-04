@@ -13,6 +13,7 @@ export default function Avatar() {
     deleteCookie("token");
     setIsAuth(false);
     router.push("/sign-in");
+    router.refresh();
   };
 
   return (
