@@ -28,3 +28,11 @@ export interface ISignIn {
   data: string;
   password: string;
 }
+
+export interface BlogInput {
+  title: string;
+  category: string;
+  content: string;
+  slug: string;
+  thumbnail?: File | string | null;
+}
