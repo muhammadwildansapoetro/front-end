@@ -11,6 +11,8 @@ export default async function BlogContent({
 }) {
   const blog: IBlog = await getBlogSlug(params.slug);
 
+  console.log(blog);
+
   return (
     <div className="mx-5 my-20 mb-20 mt-10 flex flex-col items-start lg:mx-72">
       <Link href={"/"} className="font-bold">
