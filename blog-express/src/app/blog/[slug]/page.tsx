@@ -32,7 +32,7 @@ export default async function BlogContent({
       />
       <p>Author: {blog.user.username}</p>
 
-      <div>{documentToReactComponents(blog.content)}</div>
+      <div dangerouslySetInnerHTML={{ __html: blog.content }} />
     </div>
   );
 }

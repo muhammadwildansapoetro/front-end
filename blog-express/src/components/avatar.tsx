@@ -22,7 +22,7 @@ export default function Avatar() {
         <AvatarMenu user={user} onSignOut={onSignOut} />
       ) : (
         <div className="flex flex-col items-center justify-center gap-2 font-medium">
-          <div className="flex gap-5">
+          <div className="flex gap-2">
             <Link
               href={"/register"}
               className="flex rounded-lg border border-black px-3 py-1 font-semibold hover:bg-black hover:text-white"

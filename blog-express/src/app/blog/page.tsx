@@ -15,6 +15,14 @@ export default async function BlogList() {
           <p className="mt-2 text-lg font-medium lg:text-xl">
             Gathering Ideas, Solving Problems Together
           </p>
+          <div className="mt-5">
+            <Link
+              href={"/blog/create"}
+              className="text-centar rounded-lg bg-black px-4 py-3 font-medium text-white"
+            >
+              Create a post
+            </Link>
+          </div>
         </div>
 
         <div className="mx-5 grid grid-cols-1 gap-5 lg:mx-40 lg:grid-cols-3">

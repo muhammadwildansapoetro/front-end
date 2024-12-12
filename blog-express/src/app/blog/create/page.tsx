@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BlogInput } from "@/types/blog";
 import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,9 @@ import RichTextEditor from "@/components/form/blog/textEditor";
 import Wrapper from "@/components/wrapper";
 import { createSlug } from "@/helpers/createSlug";
 import { FieldThumbnail } from "@/components/form/blog/thumbnail";
+import { toast } from "react-toastify";
+import { revalidate } from "@/libs/action";
+import { useRouter } from "next/navigation";
 
 export const blogSchema = Yup.object({
   title: Yup.string()
@@ -18,8 +21,8 @@ export const blogSchema = Yup.object({
   content: Yup.string()
     .min(20, "Content must be at least 20 characters long")
     .required("Content is required"),
-  thumbnail: Yup.mixed<File>()
-    .required("Thumbnail is required")
+  image: Yup.mixed<File>()
+    .required("Image is required")
     .test(
       "fileSize",
       "File terlalu besar (maksimal 2MB)",
@@ -43,15 +46,36 @@ const initialValues: BlogInput = {
   category: "",
   slug: "",
   content: "",
-  thumbnail: "",
+  image: "",
 };
 
 export default function BlogCreatePage() {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
   const onCreate = async (data: BlogInput) => {
     try {
-      console.log(data);
+      setIsLoading(true);
+      const formData = new FormData();
+      for (let key in data) {
+        const item = data[key as keyof BlogInput];
+        if (item) {
+          formData.append(key, item);
+        }
+      }
+      const res = await fetch("http://localhost:8000/api/blogs", {
+        method: "POST",
+        body: formData,
+        credentials: "include",
+      });
+      const result = await res.json();
+      if (!res.ok) throw result;
+      toast.success(result.message);
+      revalidate("blogs");
+      router.push("/");
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -82,7 +106,7 @@ export default function BlogCreatePage() {
                 <Field
                   name="title"
                   type="text"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-[gray-900] focus:border-blue-500 focus:ring-blue-500"
                 />
                 <ErrorMessage
                   name="title"
@@ -121,10 +145,11 @@ export default function BlogCreatePage() {
                   className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
                 >
                   <option value="">~ Pilih Category ~</option>
-                  <option value="Sport">Sport</option>
-                  <option value="Health">Health</option>
-                  <option value="Food">Food</option>
-                  <option value="Tech">Tech</option>
+                  <option value="Programming">Programming</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Geographic Information System">
+                    Geographic Information System
+                  </option>
                 </Field>
                 <ErrorMessage
                   name="category"
@@ -135,14 +160,14 @@ export default function BlogCreatePage() {
 
               <div>
                 <label
-                  htmlFor="thumbnail"
+                  htmlFor="image"
                   className="mb-2 block text-sm font-medium text-gray-900"
                 >
-                  Thumbnail
+                  Image
                 </label>
-                <FieldThumbnail name="thumbnail" formik={props} />
+                <FieldThumbnail name="image" formik={props} />
                 <ErrorMessage
-                  name="thumbnail"
+                  name="image"
                   component="span"
                   className="text-sm text-red-500"
                 />
@@ -166,9 +191,10 @@ export default function BlogCreatePage() {
               <div className="flex sm:justify-end">
                 <button
                   type="submit"
-                  className="h-[40px] w-full rounded-lg bg-[#383839] text-[#f5f5f7] hover:bg-[#595959] sm:w-[120px]"
+                  disabled={isLoading}
+                  className="h-[40px] w-full rounded-lg bg-[#383839] text-[#f5f5f7] hover:bg-[#595959] disabled:cursor-not-allowed sm:w-[120px]"
                 >
-                  Save
+                  {`${isLoading ? "Loading..." : "Create Post"}`}
                 </button>
               </div>
             </Form>

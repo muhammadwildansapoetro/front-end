@@ -34,5 +34,5 @@ export interface BlogInput {
   category: string;
   content: string;
   slug: string;
-  thumbnail?: File | string | null;
+  image?: File | string | null;
 }
