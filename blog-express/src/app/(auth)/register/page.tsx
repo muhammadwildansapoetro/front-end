@@ -31,11 +31,14 @@ export default function SignIn() {
   const handleRegister = async (user: IRegister) => {
     try {
       setIsLoading(true);
-      const res = await fetch("http://localhost:8000/api/auth/register", {
-        method: "POST",
-        body: JSON.stringify(user),
-        headers: { "content-type": "application/json" },
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL_BE!}/auth/register`,
+        {
+          method: "POST",
+          body: JSON.stringify(user),
+          headers: { "content-type": "application/json" },
+        },
+      );
 
       const result = await res.json();
       if (!res.ok) throw await result;
@@ -74,8 +77,8 @@ export default function SignIn() {
                     name="username"
                     onChange={handleChange}
                     value={values.username}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
-                    placeholder=" Enter your username"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
+                    placeholder="Enter your username"
                   />
                   {touched.username && errors.username ? (
                     <div className="text-xs text-red-500">
@@ -93,8 +96,8 @@ export default function SignIn() {
                     name="email"
                     onChange={handleChange}
                     value={values.email}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
-                    placeholder=" Enter your email"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
+                    placeholder="Enter your email"
                   />
                   {touched.email && errors.email ? (
                     <div className="text-xs text-red-500">{errors.email}</div>
@@ -110,8 +113,8 @@ export default function SignIn() {
                     name="password"
                     onChange={handleChange}
                     value={values.password}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
-                    placeholder=" Enter your password"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
+                    placeholder="Enter your password"
                   />
                   {touched.password && errors.password ? (
                     <div className="text-xs text-red-500">
@@ -129,8 +132,8 @@ export default function SignIn() {
                     name="confirmPassword"
                     onChange={handleChange}
                     value={values.confirmPassword}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
-                    placeholder=" Enter your confirm password"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
+                    placeholder="Enter your confirm password"
                   />
                   {touched.confirmPassword && errors.confirmPassword ? (
                     <div className="text-xs text-red-500">
@@ -142,7 +145,7 @@ export default function SignIn() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="mt-3 rounded-md bg-black py-2 font-medium text-white hover:bg-black/70 disabled:cursor-not-allowed disabled:bg-black/70"
+                  className="mt-3 rounded-md bg-teal-600 py-2 font-medium text-white hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-teal-700"
                 >
                   {isLoading ? "Loading..." : "Register"}
                 </button>

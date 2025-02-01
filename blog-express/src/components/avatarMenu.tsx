@@ -62,11 +62,11 @@ const AvatarMenu = ({
 
       {isDropdownOpen && (
         <div className="absolute right-0 z-10 mt-2 w-48 rounded-md border border-gray-300 bg-white shadow-lg">
-          <ul className="py-1">
+          <ul className="ml-0 list-none py-1">
             <li>
               <button
                 onClick={() => router.push("/profile")}
-                className="text block w-full px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200"
+                className="text block w-full px-4 py-2 text-sm font-medium text-gray-900 hover:bg-teal-100"
               >
                 Profile
               </button>
@@ -74,7 +74,7 @@ const AvatarMenu = ({
             <li>
               <button
                 onClick={onSignOut}
-                className="block w-full px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-300 hover:text-gray-900"
+                className="block w-full px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-100"
               >
                 Sign out
               </button>

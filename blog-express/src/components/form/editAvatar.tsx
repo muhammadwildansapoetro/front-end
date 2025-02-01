@@ -43,11 +43,14 @@ const EditAvatar = () => {
       if (values.avatar) {
         formData.append("file", values.avatar);
       }
-      const res = await fetch("http://localhost:8000/api/users/avatar-cloud", {
-        method: "PATCH",
-        body: formData,
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL_BE!}/users/avatar-cloud`,
+        {
+          method: "PATCH",
+          body: formData,
+          credentials: "include",
+        },
+      );
       const result = await res.json();
       if (!res.ok) throw result;
       toast.success(result.message);
@@ -99,7 +102,7 @@ const EditAvatar = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full rounded-md bg-black px-4 py-2 text-white hover:bg-black/80 disabled:cursor-not-allowed disabled:bg-orange-100"
+              className="w-full rounded-md bg-teal-600 px-4 py-2 text-white hover:bg-teal-600 disabled:cursor-not-allowed disabled:bg-teal-700"
             >
               {isLoading ? "Loading ..." : "Upload"}
             </button>

@@ -28,10 +28,13 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({
 
   const checkSession = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/users/profile", {
-        method: "GET",
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL_BE!}/users/profile`,
+        {
+          method: "GET",
+          credentials: "include",
+        },
+      );
       const result = await res.json();
       if (!res.ok) throw result;
       setUser(result.user);

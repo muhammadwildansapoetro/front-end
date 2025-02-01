@@ -27,12 +27,15 @@ export default function SignIn() {
   const handleSignIn = async (user: ISignIn) => {
     try {
       setIsLoading(true);
-      const res = await fetch("http://localhost:8000/api/auth/sign-in", {
-        method: "POST",
-        body: JSON.stringify(user),
-        headers: { "content-type": "application/json" },
-        credentials: "include",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL_BE!}/auth/sign-in`,
+        {
+          method: "POST",
+          body: JSON.stringify(user),
+          headers: { "content-type": "application/json" },
+          credentials: "include",
+        },
+      );
 
       const result = await res.json();
       if (!res.ok) throw await result;
@@ -73,7 +76,7 @@ export default function SignIn() {
                     name="data"
                     onChange={handleChange}
                     value={values.data}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
                     placeholder=" Enter your username or email"
                   />
                   {touched.data && errors.data ? (
@@ -90,7 +93,7 @@ export default function SignIn() {
                     name="password"
                     onChange={handleChange}
                     value={values.password}
-                    className="rounded-md border border-slate-500 p-[1px] py-2"
+                    className="rounded-md border border-slate-500 p-[1px] px-2 py-2"
                     placeholder=" Enter your password"
                   />
                   {touched.password && errors.password ? (
@@ -103,7 +106,7 @@ export default function SignIn() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="mt-3 rounded-md bg-black py-2 font-medium text-white hover:bg-black/70 disabled:cursor-not-allowed disabled:bg-black/70"
+                  className="disabled:bg-teal mt-3 rounded-md bg-teal-600 py-2 font-medium text-white hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-teal-700"
                 >
                   {isLoading ? "Loading..." : "Sign in"}
                 </button>
@@ -111,6 +114,13 @@ export default function SignIn() {
             );
           }}
         </Formik>
+
+        <p className="mt-4 text-center">
+          Don&apos;t have an account?{" "}
+          <a href="/register" className="text-teal-600 hover:underline">
+            Please register
+          </a>
+        </p>
       </div>
     </main>
   );

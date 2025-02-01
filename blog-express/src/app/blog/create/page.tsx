@@ -49,8 +49,6 @@ const initialValues: IBlogInput = {
   image: "",
 };
 
-const base_url = process.env.NEXT_PUBLIC_BASE_URL_BE;
-
 export default function BlogCreatePage() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
@@ -65,7 +63,7 @@ export default function BlogCreatePage() {
           formData.append(key, item);
         }
       }
-      const res = await fetch(`${base_url}/blogs`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_BE!}/blogs`, {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -106,7 +104,7 @@ export default function BlogCreatePage() {
                 <Field
                   name="title"
                   type="text"
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-[gray-900] focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 px-2 text-sm text-[gray-900] focus:border-blue-500 focus:ring-blue-500"
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     const value = e.target.value;
                     props.setFieldValue("title", value);
@@ -133,7 +131,7 @@ export default function BlogCreatePage() {
                   value={props.values.slug}
                   readOnly
                   disabled
-                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+                  className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 px-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
 
@@ -196,7 +194,7 @@ export default function BlogCreatePage() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="h-[40px] w-full rounded-lg bg-teal-600 text-white hover:bg-teal-700 disabled:cursor-not-allowed sm:w-[120px]"
+                  className="h-[40px] w-full rounded-lg bg-teal-600 text-white hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-teal-700 sm:w-[120px]"
                 >
                   {`${isLoading ? "Loading..." : "Create Post"}`}
                 </button>
