@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { BlogInput } from "@/types/blog";
+import React, { useState } from "react";
+import { IBlogInput } from "@/types/blog";
 import { Formik, Field, ErrorMessage, Form } from "formik";
 import * as Yup from "yup";
 import RichTextEditor from "@/components/form/blog/textEditor";
@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 import { revalidate } from "@/libs/action";
 import { useRouter } from "next/navigation";
 
-export const blogSchema = Yup.object({
+const blogSchema = Yup.object({
   title: Yup.string()
     .min(5, "Title must be at least 5 characters long")
     .max(100, "Title must be at most 100 characters long")
@@ -41,7 +41,7 @@ export const blogSchema = Yup.object({
     ),
 });
 
-const initialValues: BlogInput = {
+const initialValues: IBlogInput = {
   title: "",
   category: "",
   slug: "",
@@ -49,20 +49,23 @@ const initialValues: BlogInput = {
   image: "",
 };
 
+const base_url = process.env.NEXT_PUBLIC_BASE_URL_BE;
+
 export default function BlogCreatePage() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
-  const onCreate = async (data: BlogInput) => {
+
+  const onCreate = async (data: IBlogInput) => {
     try {
       setIsLoading(true);
       const formData = new FormData();
-      for (let key in data) {
-        const item = data[key as keyof BlogInput];
+      for (const key in data) {
+        const item = data[key as keyof IBlogInput];
         if (item) {
           formData.append(key, item);
         }
       }
-      const res = await fetch("http://localhost:8000/api/blogs", {
+      const res = await fetch(`${base_url}/blogs`, {
         method: "POST",
         body: formData,
         credentials: "include",
@@ -90,16 +93,13 @@ export default function BlogCreatePage() {
         }}
       >
         {(props) => {
-          useEffect(() => {
-            props.setFieldValue("slug", createSlug(props.values.title));
-          }, [props.values.title, props.setFieldValue]);
-
           return (
-            <Form className="flex w-full flex-col gap-3">
-              <div>
+            <Form className="mx-auto flex w-[700px] flex-col gap-3 py-10">
+              <h1 className="text-2xl font-bold text-teal-600">Create Post</h1>
+              <div className="mt-3">
                 <label
                   htmlFor="title"
-                  className="mb-2 block text-sm font-medium text-gray-900"
+                  className="mb-2 block text-lg font-medium text-gray-900"
                 >
                   Title
                 </label>
@@ -107,6 +107,11 @@ export default function BlogCreatePage() {
                   name="title"
                   type="text"
                   className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-[gray-900] focus:border-blue-500 focus:ring-blue-500"
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    const value = e.target.value;
+                    props.setFieldValue("title", value);
+                    props.setFieldValue("slug", createSlug(value));
+                  }}
                 />
                 <ErrorMessage
                   name="title"
@@ -118,7 +123,7 @@ export default function BlogCreatePage() {
               <div>
                 <label
                   htmlFor="slug"
-                  className="mb-2 block text-sm font-medium text-gray-900"
+                  className="mb-2 block text-lg font-medium text-gray-900"
                 >
                   Slug
                 </label>
@@ -135,7 +140,7 @@ export default function BlogCreatePage() {
               <div>
                 <label
                   htmlFor="category"
-                  className="mb-2 block text-sm font-medium text-gray-900"
+                  className="mb-2 block text-lg font-medium text-gray-900"
                 >
                   Category
                 </label>
@@ -144,12 +149,11 @@ export default function BlogCreatePage() {
                   as="select"
                   className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
                 >
-                  <option value="">~ Pilih Category ~</option>
-                  <option value="Programming">Programming</option>
+                  <option value="">Choose Category</option>
                   <option value="Agriculture">Agriculture</option>
-                  <option value="Geographic Information System">
-                    Geographic Information System
-                  </option>
+                  <option value="Technology">Technology</option>
+                  <option value="Football">Football </option>
+                  <option value="Other">Other </option>
                 </Field>
                 <ErrorMessage
                   name="category"
@@ -161,7 +165,7 @@ export default function BlogCreatePage() {
               <div>
                 <label
                   htmlFor="image"
-                  className="mb-2 block text-sm font-medium text-gray-900"
+                  className="mb-2 block text-lg font-medium text-gray-900"
                 >
                   Image
                 </label>
@@ -176,7 +180,7 @@ export default function BlogCreatePage() {
               <div>
                 <label
                   htmlFor="content"
-                  className="mb-2 block text-sm font-medium text-gray-900"
+                  className="mb-2 block text-lg font-medium text-gray-900"
                 >
                   Content
                 </label>
@@ -188,11 +192,11 @@ export default function BlogCreatePage() {
                 />
               </div>
 
-              <div className="flex sm:justify-end">
+              <div className="mt-2 flex sm:justify-end">
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="h-[40px] w-full rounded-lg bg-[#383839] text-[#f5f5f7] hover:bg-[#595959] disabled:cursor-not-allowed sm:w-[120px]"
+                  className="h-[40px] w-full rounded-lg bg-teal-600 text-white hover:bg-teal-700 disabled:cursor-not-allowed sm:w-[120px]"
                 >
                   {`${isLoading ? "Loading..." : "Create Post"}`}
                 </button>

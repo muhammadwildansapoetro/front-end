@@ -1,15 +1,11 @@
+import axios from "@/helpers/axios";
+
 export const getBlogs = async () => {
-  const res = await fetch(`http://localhost:8000/api/blogs`, {
-    next: { tags: ["blogs"] },
-  });
-  const data = await res.json();
+  const { data } = await axios.get(`http://localhost:8000/api/blogs`);
   return data.blogs;
 };
 
-export const getBlogSlug = async (slug: string) => {
-  const res = await fetch(`http://localhost:8000/api/blogs/${slug}`, {
-    next: { revalidate: 0 },
-  });
-  const data = await res.json();
+export const getBlogBySlug = async (slug: string) => {
+  const { data } = await axios.get(`http://localhost:8000/api/blogs/${slug}`);
   return data.blog;
 };

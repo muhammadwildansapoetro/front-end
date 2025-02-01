@@ -14,13 +14,13 @@ const AvatarSchema = Yup.object().shape({
     .required("Avatar is required")
     .test(
       "fileSize",
-      "File terlalu besar (maksimal 2MB)",
+      "File size too large (max 2MB)",
       (value) =>
         !value || (value instanceof File && value.size <= 2 * 1024 * 1024),
     )
     .test(
       "fileType",
-      "Format file tidak didukung (hanya .jpeg, .png, .jpg, .webp)",
+      "File format not supported (Only .jpeg, .png, .jpg, .webp)",
       (value) =>
         !value ||
         (value instanceof File &&
@@ -51,16 +51,16 @@ const EditAvatar = () => {
       const result = await res.json();
       if (!res.ok) throw result;
       toast.success(result.message);
-    } catch (err: any) {
+    } catch (err) {
       console.log(err);
-      toast.error(err.message);
+      toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="mx-auto max-w-sm rounded-lg bg-white p-4 shadow-md">
+    <div className="mx-auto max-w-sm rounded-lg border bg-white p-4 shadow-md">
       <h2 className="mb-4 text-lg font-semibold text-gray-700">Edit Avatar</h2>
       <Formik
         initialValues={initialValues}

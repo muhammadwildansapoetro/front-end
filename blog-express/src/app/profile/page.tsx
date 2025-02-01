@@ -2,8 +2,8 @@ import EditAvatar from "@/components/form/editAvatar";
 
 export default function ProfilePage() {
   return (
-    <div>
+    <main className="py-10">
       <EditAvatar />
-    </div>
+    </main>
   );
 }

@@ -19,15 +19,23 @@ export default function Avatar() {
   return (
     <div>
       {isAuth ? (
-        <AvatarMenu user={user} onSignOut={onSignOut} />
+        <div className="flex items-center justify-center gap-5">
+          <Link
+            href={"/blog/create"}
+            className="rounded-lg bg-teal-600 px-4 py-2 text-white hover:bg-teal-700"
+          >
+            Write a post
+          </Link>
+          <AvatarMenu user={user} onSignOut={onSignOut} />
+        </div>
       ) : (
         <div className="flex flex-col items-center justify-center gap-2 font-medium">
           <div className="flex gap-2">
             <Link
-              href={"/register"}
+              href={"/blog/create"}
               className="flex rounded-lg border border-black px-3 py-1 font-semibold hover:bg-black hover:text-white"
             >
-              Register
+              Write post
             </Link>
             <Link
               href={"/sign-in"}

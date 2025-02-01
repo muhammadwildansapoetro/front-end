@@ -1,38 +1,48 @@
-import { getBlogSlug } from "@/libs/blog";
+import { getBlogBySlug } from "@/libs/blog";
 import { IBlog } from "@/types/blog";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function BlogContent({
+export default async function BlogPost({
   params,
 }: {
   params: { slug: string };
 }) {
-  const blog: IBlog = await getBlogSlug(params.slug);
-
-  console.log(blog);
+  const blog: IBlog = await getBlogBySlug(params.slug);
 
   return (
-    <div className="mx-5 my-20 mb-20 mt-10 flex flex-col items-start lg:mx-72">
-      <Link href={"/"} className="font-bold">
-        Back
-      </Link>
+    <main className="flex w-full flex-col p-5 sm:mx-auto sm:w-[1000px] sm:p-10">
+      <div>
+        <Link
+          href={"/"}
+          className="rounded-md border border-teal-600 px-2 py-1 font-bold text-teal-600 hover:bg-teal-600 hover:text-white"
+        >
+          Home
+        </Link>
+      </div>
 
-      <h1 className="text-2xl font-bold lg:text-3xl">{blog.title}</h1>
+      <h1 className="mt-5 text-2xl font-bold lg:text-3xl">{blog.title}</h1>
 
-      <div>Category: {blog.category}</div>
+      <div className="mt-2 font-medium text-teal-600">
+        Category: {blog.category}
+      </div>
 
-      <Image
-        src={`${blog.image}`}
-        alt="image"
-        width={500}
-        height={500}
-        className="aspect-video object-cover lg:w-full"
+      <div className="mt-5 overflow-hidden rounded-lg">
+        <Image
+          src={`${blog.image}`}
+          alt="image"
+          width={500}
+          height={500}
+          className="aspect-video object-cover lg:w-full"
+        />
+      </div>
+
+      <div
+        dangerouslySetInnerHTML={{ __html: blog.content }}
+        className="mt-5"
       />
-      <p>Author: {blog.user.username}</p>
 
-      <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-    </div>
+      <p className="mt-5 text-gray-500">Created by {blog.user.username}</p>
+    </main>
   );
 }

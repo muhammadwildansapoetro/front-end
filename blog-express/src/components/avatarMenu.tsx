@@ -1,6 +1,5 @@
 import { IUser } from "@/types/blog";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -44,13 +43,13 @@ const AvatarMenu = ({
         onClick={toggleDropdown}
         className="flex cursor-pointer items-center"
       >
-        <div className="relative h-10 w-10">
+        <div className="relative h-10 w-10 overflow-hidden">
           <Image
             src={user?.avatar || ""}
             alt={user?.username || "author"}
             fill
             priority
-            className="rounded-full border border-black"
+            className="rounded-full border border-black object-cover"
           />
         </div>
         <div className="ms-2 min-w-0 flex-1 max-sm:hidden">

@@ -41,16 +41,16 @@ export default function SignIn() {
       if (!res.ok) throw await result;
 
       toast.success(result.message);
-    } catch (error: any) {
+    } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error("Something went wrong");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex justify-center">
+    <main className="flex justify-center">
       <div className="mt-10 w-[500px] p-5 lg:rounded-lg lg:border lg:border-slate-300 lg:shadow-lg">
         <h1 className="mb-5 text-2xl font-bold">Register</h1>
         <Formik
@@ -151,6 +151,6 @@ export default function SignIn() {
           }}
         </Formik>
       </div>
-    </div>
+    </main>
   );
 }

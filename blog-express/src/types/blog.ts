@@ -29,10 +29,11 @@ export interface ISignIn {
   password: string;
 }
 
-export interface BlogInput {
+export interface IBlogInput {
+  [key: string]: string | File | null;
   title: string;
   category: string;
   content: string;
   slug: string;
-  image?: File | string | null;
+  image: File | string | null;
 }

@@ -18,9 +18,9 @@ export default function VerifyPage({ params }: { params: { token: string } }) {
       if (!res.ok) throw result;
       toast.success(result.message);
       router.push("/sign-in");
-    } catch (error: any) {
+    } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error("Something went wrong");
       router.push("/");
     }
   };
@@ -29,14 +29,5 @@ export default function VerifyPage({ params }: { params: { token: string } }) {
     onVerify();
   }, []);
 
-  return (
-    <div className="flex h-screen items-center justify-center">
-      {/* <button
-        onClick={onVerify}
-        className="rounded-md bg-black px-3 py-1 text-lg text-white"
-      >
-        Verify
-      </button> */}
-    </div>
-  );
+  return <div></div>;
 }

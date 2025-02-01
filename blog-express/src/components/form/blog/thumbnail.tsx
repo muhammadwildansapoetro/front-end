@@ -3,10 +3,11 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { FormikProps } from "formik";
+import { IBlogInput } from "@/types/blog";
 
 interface FieldThumbnailProps {
   name: string;
-  formik: FormikProps<any>;
+  formik: FormikProps<IBlogInput>;
   className?: string;
 }
 
@@ -48,7 +49,7 @@ export const FieldThumbnail: React.FC<FieldThumbnailProps> = ({
       ) : (
         <div
           onClick={() => imgRef.current?.click()}
-          className="flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-md border border-dashed border-gray-500 md:h-[150px] md:w-[150px]"
+          className="flex h-[100px] w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-md border border-dashed border-gray-500 md:h-[150px] md:w-[150px]"
         >
           <Image
             src={previewUrl}

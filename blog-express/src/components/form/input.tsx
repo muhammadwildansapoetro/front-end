@@ -1,3 +1,4 @@
+import { IBlogInput } from "@/types/blog";
 import { Field, FormikProps } from "formik";
 import { HTMLInputTypeAttribute } from "react";
 
@@ -5,7 +6,7 @@ interface IProps {
   name: string;
   label: string;
   placeholder?: string;
-  formik: FormikProps<any>;
+  formik: FormikProps<IBlogInput>;
   type?: HTMLInputTypeAttribute;
 }
 
