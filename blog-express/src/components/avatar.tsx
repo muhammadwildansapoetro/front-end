@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import AvatarMenu from "./avatarMenu";
-import { deleteCookie } from "@/libs/action";
 import { useSession } from "@/context/useSession";
 import { useRouter } from "next/navigation";
 
@@ -10,11 +9,13 @@ export default function Avatar() {
   const router = useRouter();
   const { user, isAuth, setIsAuth } = useSession();
   const onSignOut = () => {
-    deleteCookie("token");
+    localStorage.removeItem("token");
     setIsAuth(false);
     router.push("/sign-in");
     router.refresh();
   };
+
+  console.log("is auth?", isAuth);
 
   return (
     <div>
@@ -33,13 +34,13 @@ export default function Avatar() {
           <div className="flex gap-2">
             <Link
               href={"/blog/create"}
-              className="flex rounded-lg border border-black px-3 py-1 font-semibold hover:bg-black hover:text-white"
+              className="flex rounded-lg border border-teal-600 px-3 py-1 font-semibold text-teal-600 hover:bg-teal-600 hover:text-white"
             >
               Write post
             </Link>
             <Link
               href={"/sign-in"}
-              className="flex rounded-lg border border-black bg-black px-3 py-1 font-semibold text-white hover:bg-white hover:text-black"
+              className="flex rounded-lg border border-teal-600 bg-teal-600 px-3 py-1 font-semibold text-white hover:bg-teal-700"
             >
               Sign in
             </Link>

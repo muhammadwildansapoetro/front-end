@@ -1,5 +1,6 @@
 "use client";
 
+import protectAfterAuth from "@/HOC/afterAuthProtection";
 import { IRegister } from "@/types/blog";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useState } from "react";
@@ -19,7 +20,7 @@ const RegisterSchema = Yup.object().shape({
     .required("Confirm password is required"),
 });
 
-export default function SignIn() {
+function Register() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const initialValue: IRegister = {
     username: "",
@@ -157,3 +158,5 @@ export default function SignIn() {
     </main>
   );
 }
+
+export default protectAfterAuth(Register);

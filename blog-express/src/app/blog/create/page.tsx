@@ -9,7 +9,6 @@ import Wrapper from "@/components/wrapper";
 import { createSlug } from "@/helpers/createSlug";
 import { FieldThumbnail } from "@/components/form/blog/thumbnail";
 import { toast } from "react-toastify";
-import { revalidate } from "@/libs/action";
 import { useRouter } from "next/navigation";
 
 const blogSchema = Yup.object({
@@ -71,7 +70,6 @@ export default function BlogCreatePage() {
       const result = await res.json();
       if (!res.ok) throw result;
       toast.success(result.message);
-      revalidate("blogs");
       router.push("/");
     } catch (err) {
       console.error(err);

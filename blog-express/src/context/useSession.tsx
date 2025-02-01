@@ -28,11 +28,18 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({
 
   const checkSession = async () => {
     try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        console.log("Please sign in first");
+        return;
+      }
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL_BE!}/users/profile`,
         {
           method: "GET",
-          credentials: "include",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         },
       );
       const result = await res.json();

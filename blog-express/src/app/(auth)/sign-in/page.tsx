@@ -1,6 +1,7 @@
 "use client";
 
 import { useSession } from "@/context/useSession";
+import protectAfterAuth from "@/HOC/afterAuthProtection";
 import { ISignIn } from "@/types/blog";
 import { Field, Form, Formik, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
@@ -15,7 +16,7 @@ const RegisterSchema = Yup.object().shape({
     .required("Password is required"),
 });
 
-export default function SignIn() {
+function SignIn() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { setIsAuth, setUser } = useSession();
   const router = useRouter();
@@ -33,19 +34,19 @@ export default function SignIn() {
           method: "POST",
           body: JSON.stringify(user),
           headers: { "content-type": "application/json" },
-          credentials: "include",
         },
       );
 
       const result = await res.json();
       if (!res.ok) throw await result;
       router.push("/");
+      localStorage.setItem("token", result.token);
       setIsAuth(true);
       setUser(result.user);
       toast.success(result.message);
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error("Error sign in");
     } finally {
       setIsLoading(false);
     }
@@ -125,3 +126,5 @@ export default function SignIn() {
     </main>
   );
 }
+
+export default protectAfterAuth(SignIn);
