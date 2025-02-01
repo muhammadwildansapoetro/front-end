@@ -65,7 +65,6 @@ export default function BlogCreatePage() {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL_BE!}/blogs`, {
         method: "POST",
         body: formData,
-        credentials: "include",
       });
       const result = await res.json();
       if (!res.ok) throw result;

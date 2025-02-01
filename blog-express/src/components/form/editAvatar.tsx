@@ -48,7 +48,6 @@ const EditAvatar = () => {
         {
           method: "PATCH",
           body: formData,
-          credentials: "include",
         },
       );
       const result = await res.json();
