@@ -40,11 +40,11 @@ export default function About() {
           <p className="mt-5 text-lg text-gray-700 md:text-justify md:text-xl">
             I enjoy continuous learning and solving real-world problems through
             web development. I&apos;m committed to maintaining high standards of
-            ethics and professionalism in my work. I'm looking for a full-time
-            role, contract, or internship where I can apply my skills, grow as a
-            web developer, and contribute to a team, be part of projects that
-            make a positive impact. I'm eager to discuss new opportunities,
-            collaborations, or share ideas.
+            ethics and professionalism in my work. I&apos;m looking for a
+            full-time role, contract, or internship where I can apply my skills,
+            grow as a web developer, and contribute to a team, be part of
+            projects that make a positive impact. I&apos;m eager to discuss new
+            opportunities, collaborations, or share ideas.
           </p>
         </div>
       </div>
