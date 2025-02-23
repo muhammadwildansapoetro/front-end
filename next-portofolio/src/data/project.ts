@@ -76,7 +76,7 @@ export const projects = [
     date: "November 2024",
     team: [
       {
-        name: "Mirza Ali Yusuf ",
+        name: "Mirza Ali Yusuf",
         linkedIn: "https://www.linkedin.com/in/mirzaaliyusuf/",
       },
     ],
