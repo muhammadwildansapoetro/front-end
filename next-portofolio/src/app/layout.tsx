@@ -6,11 +6,14 @@ export const metadata: Metadata = {
   title: "Muhammadwildansapoetro",
   description:
     "Muhammadwildansapoetro, a full-stack web developer, based in Bandung - Indonesia, eager to helping businesses grow with digital solutions.",
+  icons: {
+    icon: "/green-circle.png",
+  },
 };
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
