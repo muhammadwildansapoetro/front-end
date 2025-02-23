@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="hero" className="flex min-h-dvh items-center justify-center">
+    <section
+      id="hero"
+      className="flex min-h-dvh items-center justify-center border"
+    >
       <div className="flex w-full items-center justify-center p-5 lg:w-[1100px]">
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold text-gray-900 lg:text-center lg:text-6xl">
@@ -40,7 +43,7 @@ export default function Hero() {
                 type="button"
                 className="rounded-lg border-2 border-green-700 bg-green-700 px-4 py-2 text-center text-white transition-all duration-300 ease-in-out hover:bg-green-800 hover:text-white lg:w-fit lg:text-lg"
               >
-                View My Work
+                View My Projects
               </Link>
             </div>
           </div>

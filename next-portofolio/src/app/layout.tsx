@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Muhammadwildansapoetro, a full-stack web developer, based in Bandung - Indonesia, eager to helping businesses grow with digital solutions.",
   icons: {
-    icon: "/green-circle.png",
+    icon: "/green_icon.svg",
   },
 };
 
