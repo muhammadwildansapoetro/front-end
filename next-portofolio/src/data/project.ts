@@ -31,17 +31,20 @@ export const projects = [
     id: 2,
     title: "FarmLink Indonesia – Company Profile",
     description:
-      "FarmLink Indonesia is a company profile website built as part of Code Challenge 2, designed to showcase the company's mission, services, and team while ensuring high performance based on Core Web Vitals. The website includes four main pages: Home, About Us, Services, and Teams, featuring a hero section, company overview, customer testimonials, and dynamically fetched team data. Developed using Next.js and Tailwind CSS, the website is fully responsive and integrates Contentful CMS for easy content management. I implemented React Context for state management and optimized performance through lazy loading, image optimization, and asset management, achieving high PageSpeed Insights scores across all pages.",
+      "FarmLink Indonesia is a company profile website designed to showcase the company's mission, services, and team while ensuring high performance based on Core Web Vitals. The website includes four main pages: Home, About Us, Services, and Teams, featuring a hero section, company overview, customer testimonials, and dynamically fetched team data. Developed using Next.js and Tailwind CSS, the website is fully responsive and integrates Contentful CMS for easy content management. I implemented React Context for state management and optimized performance through lazy loading, image optimization, and asset management, achieving high PageSpeed Insights scores across all pages.",
 
     image:
       "https://media.licdn.com/dms/image/v2/D562DAQEJkXFTbOIAyg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738412109757?e=1740913200&v=beta&t=1suK0VDPCuF_zrq261m7qYCdWYp8Qac_eSYeR4CUfEM",
     features: [
-      "Hero section with dynamic content",
-      "Company overview with interactive elements",
-      "Customer testimonials section",
-      "Dynamically fetched team profiles from Contentful",
-      "Lazy loading for better performance",
+      "Hero section with high-quality imagery",
+      "Company overview with history, team, and culture",
+      "Customer testimonials for credibility",
+      "Products & Services showcase with call-to-action buttons",
+      "Dynamically fetched team profiles from RandomUser.me",
+      "Responsive design for desktop and mobile",
       "SEO-friendly metadata and structure",
+      "Contentful CMS integration for content management",
+      "Optimized performance with lazy loading and image optimization",
     ],
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Contentful CMS"],
     link: "https://farmlink-indonesia.vercel.app/",
@@ -78,6 +81,46 @@ export const projects = [
       {
         name: "Mirza Ali Yusuf",
         linkedIn: "https://www.linkedin.com/in/mirzaaliyusuf/",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "TalentBridge - Job Board App",
+    description:
+      "TalentBridge is a job board web platform designed to connect job seekers with job opportunities posted by companies, streamlining the hiring process for both parties. It features job discovery, user authentication, company job posting management, and application tracking. Users can search for jobs, apply with CV uploads, and access exclusive features like a CV generator and skill assessments through a subscription. Companies can manage job postings, track applicants, and conduct pre-selection tests. The app includes an admin dashboard for job postings and applicant management, ensuring a seamless hiring experience.",
+    image:
+      "https://media.licdn.com/dms/image/v2/D562DAQEusMtfgnqRWA/profile-treasury-image-shrink_800_800/B56ZU12QeVHQAc-/0/1740365171742?e=1740970800&v=beta&t=F0dLhqBSaIkHp08HtrI8PMtWlLbAoxX8OiJrIauyfQU",
+    features: [
+      "Job search with advanced filters and keyword search",
+      "User authentication and role-based access control",
+      "Company dashboard for job posting and applicant tracking",
+      "Job application with CV upload functionality",
+      "Subscription-based exclusive features (CV generator, skill assessments)",
+      "Pre-selection tests for applicants",
+      "Admin dashboard for managing job postings and users",
+      "Bookmark and save job listings for later",
+      "Email notifications for job updates and application status",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Puppeteer",
+    ],
+    link: "",
+    date: "January 2025 - Present (On Going)",
+    team: [
+      {
+        name: "Hanif Ahmad Rizqullah",
+        linkedIn: "https://www.linkedin.com/in/hanifahmadrizqullah/",
+      },
+      {
+        name: "Tsania Millatina Aghnia Fariha",
+        linkedIn: "https://www.linkedin.com/in/tsaniafariha/",
       },
     ],
   },

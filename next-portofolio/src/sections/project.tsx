@@ -21,7 +21,7 @@ export default function Project() {
                 <div
                   key={project.id}
                   className={`flex min-h-dvh flex-col-reverse gap-10 lg:flex-row ${
-                    project.id % 2 === 0 && "lg:flex-row-reverse"
+                    project.id % 2 !== 0 && "lg:flex-row-reverse"
                   }`}
                 >
                   <div className="basis-1/2">
@@ -40,7 +40,7 @@ export default function Project() {
                     <Link
                       href={project.link}
                       target="_blank"
-                      className="text-2xl font-medium hover:text-green-700"
+                      className="text-2xl font-medium text-gray-900 hover:text-green-700"
                     >
                       {project.title}
                     </Link>
@@ -49,7 +49,9 @@ export default function Project() {
                     </p>
                     <p className="mt-3">{project.description}</p>
                     <div className="mt-3">
-                      <p className="text-lg font-medium">Features:</p>
+                      <p className="text-lg font-medium text-gray-900">
+                        Features:
+                      </p>
                       <ul className="list-disc">
                         {project.features.map((feature, index) => {
                           return (
@@ -61,7 +63,9 @@ export default function Project() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <p className="text-lg font-medium">Tech Stack:</p>
+                      <p className="text-lg font-medium text-gray-900">
+                        Tech Stack:
+                      </p>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {project.techStack.map((item, index) => {
                           return (
@@ -77,7 +81,9 @@ export default function Project() {
                     </div>
                     {project.team.length > 0 && (
                       <div className="mt-3 flex flex-col gap-1">
-                        <p className="text-lg font-medium">Team:</p>
+                        <p className="text-lg font-medium text-gray-900">
+                          Team:
+                        </p>
                         <div className="flex flex-wrap gap-2">
                           <ul className="list-disc">
                             {project.team.map((team, index) => (
@@ -85,7 +91,7 @@ export default function Project() {
                                 <Link
                                   href={team.linkedIn}
                                   target="_blank"
-                                  className="underline underline-offset-4 hover:text-green-700"
+                                  className="text-gray-700 underline underline-offset-4 hover:text-green-700"
                                 >
                                   {team.name}
                                 </Link>
