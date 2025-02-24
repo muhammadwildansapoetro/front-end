@@ -14,7 +14,8 @@ export default function Contact() {
         </h1>
         <p className="mt-4 w-[700px] text-center text-lg text-gray-700">
           Have a project in mind or just want to say hi? <br />
-          I'm open to collaboration—let's build something great together!
+          I&apos;m open to collaboration. Let&apos;s build something great
+          together!
         </p>
         <div className="mt-5 flex flex-col gap-1 text-gray-700">
           <div className="flex items-center gap-2 hover:text-green-700">
