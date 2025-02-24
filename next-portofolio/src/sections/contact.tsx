@@ -10,12 +10,11 @@ export default function Contact() {
     >
       <div className="flex w-full flex-col items-center md:w-[1000px]">
         <h1 className="text-3xl font-bold text-gray-900 lg:text-4xl">
-          Let&apsos;s Connect
+          Let&apos;s Connect
         </h1>
-        <p className="mt-4 text-lg text-gray-700">
-          Have a project idea or just want to say hello? I&apos;m open to
-          collaboration and always happy to chat. Reach out, and let&apos;s
-          create something amazing together!
+        <p className="mt-4 w-[700px] text-center text-lg text-gray-700">
+          Have a project in mind or just want to say hi? <br />
+          I'm open to collaboration—let's build something great together!
         </p>
         <div className="mt-5 flex flex-col gap-1 text-gray-700">
           <div className="flex items-center gap-2 hover:text-green-700">
