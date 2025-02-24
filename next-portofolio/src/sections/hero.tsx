@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-dvh items-center justify-center border"
+      className="flex min-h-dvh w-full items-center justify-center border"
     >
-      <div className="flex w-full items-center justify-center p-5 lg:w-[1100px]">
+      <div className="flex w-full max-w-[1100px] items-center justify-center p-5">
         <div className="flex flex-col">
           <h1 className="text-3xl font-bold text-gray-900 lg:text-center lg:text-6xl">
             Hello, <br className="lg:hidden" /> I&apos;m{" "}

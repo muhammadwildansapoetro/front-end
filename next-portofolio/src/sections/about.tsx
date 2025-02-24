@@ -5,9 +5,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex min-h-dvh flex-col items-center border p-5 lg:p-10"
+      className="flex min-h-dvh w-full flex-col items-center border p-5 lg:p-10"
     >
-      <div className="flex w-full flex-col md:w-[1000px]">
+      <div className="flex w-full max-w-[1000px] flex-col">
         <h1 className="text-3xl font-bold text-gray-900 lg:text-center lg:text-4xl">
           About Me
         </h1>

@@ -6,13 +6,13 @@ export default function Project() {
   return (
     <section
       id="project"
-      className="flex min-h-dvh justify-center border p-5 lg:p-10"
+      className="flex min-h-dvh w-full justify-center border p-5 lg:p-10"
     >
-      <div className="flex w-full flex-col md:w-[1000px]">
-        <h1 className="border-b border-gray-300 pb-5 text-3xl font-bold text-gray-900 lg:text-center lg:text-4xl">
+      <div className="flex w-full max-w-[1000px] flex-col">
+        <h1 className="mb-5 border-b border-gray-300 pb-5 text-3xl font-bold text-gray-900 lg:mb-10 lg:text-center lg:text-4xl">
           Projects
         </h1>
-        <div className="mt-5 flex flex-col lg:mt-10">
+        <div className="flex flex-col lg:gap-10">
           {projects
             .sort((a, b) => b.id - a.id)
             .map((project) => {
@@ -20,7 +20,7 @@ export default function Project() {
               return (
                 <div
                   key={project.id}
-                  className={`flex min-h-dvh flex-col-reverse gap-10 lg:flex-row ${
+                  className={`flex min-h-dvh flex-col-reverse gap-10 pt-5 lg:flex-row lg:border-t lg:border-gray-300 ${
                     project.id % 2 !== 0 && "lg:flex-row-reverse"
                   }`}
                 >
@@ -36,7 +36,7 @@ export default function Project() {
                       />
                     </Link>
                   </div>
-                  <div className="mt-20 basis-1/2 lg:mt-0">
+                  <div className="basis-1/2 border-t pt-5 lg:border-0 lg:pt-0">
                     <Link
                       href={project.link}
                       target="_blank"

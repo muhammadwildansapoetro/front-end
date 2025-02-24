@@ -6,16 +6,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="flex min-h-dvh flex-col items-center border p-5 lg:p-10"
+      className="flex min-h-dvh w-full flex-col items-center border p-5 lg:p-10"
     >
-      <div className="flex w-full flex-col items-center md:w-[1000px]">
+      <div className="flex w-full max-w-[1000px] flex-col items-center">
         <h1 className="text-3xl font-bold text-gray-900 lg:text-4xl">
           Let&apos;s Connect
         </h1>
-        <p className="mt-4 w-[700px] text-center text-lg text-gray-700">
-          Have a project in mind or just want to say hi? <br />
-          I&apos;m open to collaboration. Let&apos;s build something great
-          together!
+        <p className="mt-4 w-full max-w-[700px] text-lg text-gray-700 lg:text-center">
+          Interested in working together? <br />
+          I&apos;d be happy to connect and learn from each other. <br />
+          Let&apos;s build something meaningful!
         </p>
         <div className="mt-5 flex flex-col gap-1 text-gray-700">
           <div className="flex items-center gap-2 hover:text-red-700">
