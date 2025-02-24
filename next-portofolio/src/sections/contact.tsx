@@ -18,7 +18,7 @@ export default function Contact() {
           together!
         </p>
         <div className="mt-5 flex flex-col gap-1 text-gray-700">
-          <div className="flex items-center gap-2 hover:text-green-700">
+          <div className="flex items-center gap-2 hover:text-red-700">
             <MdEmail className="size-5" />
             <Link
               href="mailto:muhammadwildansapoetro@gmail.com"
@@ -27,7 +27,7 @@ export default function Contact() {
               muhammadwildansapoetro@gmail.com
             </Link>
           </div>
-          <div className="flex items-center gap-2 hover:text-green-700">
+          <div className="flex items-center gap-2 hover:text-blue-700">
             <FaLinkedin className="size-5" />
             <Link
               href={"https://www.linkedin.com/in/muhammadwildansapoetro/"}
