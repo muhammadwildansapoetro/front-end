@@ -4,8 +4,7 @@ export const projects = [
     title: "Ngariung Blog – Blogging Platform",
     description:
       "Ngariung Blog is a content-sharing platform where users can write and publish posts on agriculture, technology, and football. Designed for an engaging and user-friendly experience, the blog features a clean, responsive UI, an edit/upload profile image feature, and the ability to write and create posts. Built with Next.js, Tailwind CSS, Express.js, and PostgreSQL, the backend ensures secure and efficient data management, while the responsive design provides a seamless reading and writing experience.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D562DAQGa53VkWjqz9w/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738411939489?e=1740902400&v=beta&t=zSccDbXvhnb9MqDzANos1VlZAp6dQScja41M3oUrNNA",
+    image: "/ngariung.jpeg",
     features: [
       "User authentication (Register & Sign in)",
       "Write, edit, and delete posts",
@@ -33,8 +32,7 @@ export const projects = [
     description:
       "FarmLink Indonesia is a company profile website designed to showcase the company's mission, services, and team while ensuring high performance based on Core Web Vitals. The website includes four main pages: Home, About Us, Services, and Teams, featuring a hero section, company overview, customer testimonials, and dynamically fetched team data. Developed using Next.js and Tailwind CSS, the website is fully responsive and integrates Contentful CMS for easy content management. I implemented React Context for state management and optimized performance through lazy loading, image optimization, and asset management, achieving high PageSpeed Insights scores across all pages.",
 
-    image:
-      "https://media.licdn.com/dms/image/v2/D562DAQEJkXFTbOIAyg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738412109757?e=1740913200&v=beta&t=1suK0VDPCuF_zrq261m7qYCdWYp8Qac_eSYeR4CUfEM",
+    image: "/farmlink.jpeg",
     features: [
       "Hero section with high-quality imagery",
       "Company overview with history, team, and culture",
@@ -56,8 +54,7 @@ export const projects = [
     title: "MatchTix – Event Management Platform",
     description:
       "MatchTix is an event management platform that allows organizers to create and promote events while enabling attendees to browse, register, and purchase tickets. Event organizers can add event details, set ticket prices, and offer promotions like referral-based discounts. Attendees can search, filter, and register for events using a responsive interface. The platform also features a referral system where users can earn points and redeem them for ticket discounts. It includes a dashboard for organizers to manage events and view analytics. As a Full-Stack Web Developer working in a team of two, I helped build the platform using Next.js, TypeScript, TailwindCSS, Express.js, Prisma, and PostgreSQL, ensuring secure role-based access and optimized performance.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D562DAQFjLrXNOl0rkw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738412179770?e=1740913200&v=beta&t=CJK7XZzlmfVWZ7XyYwajfvkQEsDKXlqk9Jz8zVBhnJ4",
+    image: "/matchtix.jpeg",
     features: [
       "Landing page with event listings and details",
       "Event discovery with search (debounce), filter, and pagination",
@@ -94,8 +91,7 @@ export const projects = [
     title: "TalentBridge - Job Board App",
     description:
       "TalentBridge is a job board web platform designed to connect job seekers with job opportunities posted by companies, streamlining the hiring process for both parties. It features job discovery, user authentication, company job posting management, and application tracking. Users can search for jobs, apply with CV uploads, and access exclusive features like a CV generator and skill assessments through a subscription. Companies can manage job postings, track applicants, and conduct pre-selection tests. The app includes an admin dashboard for job postings and applicant management, ensuring a seamless hiring experience.",
-    image:
-      "https://media.licdn.com/dms/image/v2/D562DAQEusMtfgnqRWA/profile-treasury-image-shrink_800_800/B56ZU12QeVHQAc-/0/1740365171742?e=1740970800&v=beta&t=F0dLhqBSaIkHp08HtrI8PMtWlLbAoxX8OiJrIauyfQU",
+    image: "/talentbridge.jpeg",
     features: [
       "Job search with advanced filters and keyword search",
       "User authentication and role-based access control",
