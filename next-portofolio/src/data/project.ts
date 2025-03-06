@@ -78,7 +78,7 @@ export const projects = [
       "PostgreSQL",
     ],
     link: "https://farmlink-indonesia.vercel.app/",
-    date: "November 2024",
+    date: "December 2024",
     team: [
       {
         name: "Mirza Ali Yusuf",
@@ -111,8 +111,8 @@ export const projects = [
       "Prisma ORM",
       "PostgreSQL",
     ],
-    link: "",
-    date: "January 2025 - Present (On Going)",
+    link: "https://talentsbridge.vercel.app/",
+    date: "February 2025",
     team: [
       {
         name: "Hanif Ahmad Rizqullah",
