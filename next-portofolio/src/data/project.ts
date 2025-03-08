@@ -77,7 +77,7 @@ export const projects = [
       "Prisma ORM",
       "PostgreSQL",
     ],
-    link: "https://farmlink-indonesia.vercel.app/",
+    link: "https://matchtix.vercel.app/",
     date: "December 2024",
     team: [
       {
